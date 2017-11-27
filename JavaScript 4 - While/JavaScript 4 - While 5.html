@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que imprima en pantalla horizontal o verticalmente los términos correspondientes a la serie de Fibonacci hasta el término que sea menor o igual que 100:
+
+	1.
+	2.
+	3.
+	5.
+	8.
+	13.
+	21.
+	34.
+	55.
+	89.
+
+o
+
+	1, 2, 3, … 89,
+
+El script finaliza con el mensaje:
+
+	Gracias por haber colaborado en el crowdfunding para mejorar este software.
+
+Primer término ‘.’-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var a = 0;
+        var b = 1;
+        var c = '';
+
+        while (b <= 100) {
+            document.write(c + '.');
+            document.write('<br>');
+
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        document.write('<br>' + '<br>' + 'Gracies por haber colaborat en el crowdfunding per a millorar este programa');
+    </script>
+</body>
+
+</html>

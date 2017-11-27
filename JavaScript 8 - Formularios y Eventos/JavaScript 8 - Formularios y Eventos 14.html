@@ -1,0 +1,53 @@
+<!--Confeccione un script en Javascript que presente 4 (cuatro) checkboxes con las siguientes opciones:
+•	Javascript
+•	PHP
+•	JSP
+•	VB.net
+
+Y un botón “Mostrar opciones seleccionadas” que al ser pulsado indique cuántos checkboxes han sido selecionados:
+
+•	Ha seleccionado xxx lenguaje(s).-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <input type="checkbox" name="javascript" id="JS" checked/>
+        <label for="JS">JavaScript</label>
+        <br>
+        <input type="checkbox" name="php" id="PHP" />
+        <label for="PHP">PHP</label>
+        <br>
+        <input type="checkbox" name="jsp" id="JSP">
+        <label for="JSP">JSP</label>
+        <br>
+        <input type="checkbox" name="vb.net" id="VB.net">
+        <label for="VB.net">VB.net</label>
+        <br>
+        <br>
+        <input type="button" onClick="contar()" value="Contar Valores con Tic">
+    </form>
+    <script>
+
+        function contar() {
+            contador = 0;
+            if (document.getElementById("JS").checked === true) {
+                contador++
+            }
+            if (document.getElementById("PHP").checked === true) {
+                contador++
+            }
+            if (document.getElementById("JSP").checked === true) {
+                contador++
+            }
+            if (document.getElementById("VB.net").checked === true) {
+                contador++
+            }
+            alert(contador + " opcions elegides");
+        }
+    </script>
+</body>
+
+</html>

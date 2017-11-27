@@ -1,0 +1,58 @@
+<!--Confeccione un script en Javascript que solicite en letras minúsculas 1 (uno) de los siguientes colores:
+
+•	Rojo
+•	Verde
+•	Azul
+•	Amarillo
+
+Al introducir correctamente el nombre del color, el fondo de la ventana/documento adquirirá dicho color.
+
+En cualquier otro caso se mostrará el siguiente mensaje:
+
+	En esta versión sólo 4 colores en minúsculas.
+
+
+•	Color magenta
+•	Letra grande
+•	Centrado-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var color = prompt("Introduix color");
+        var error = "En esta versió sols 4 colors en minúscula";
+        switch (color) {
+            case "roig":
+
+                document.body.style.backgroundColor = "red";
+
+                break;
+
+            case "verd":
+
+                document.body.style.backgroundColor = "green";
+
+                break;
+
+            case "groc":
+
+                document.body.style.backgroundColor = "yellow";
+
+                break;
+
+            case "violeta":
+
+                document.body.style.backgroundColor = "indigo";
+
+                break;
+
+            default:
+                document.write("<p style='text-align: center; margin: 0;'>" + error.fontsize(10).fontcolor("indigo") + "</p>");
+        }
+    </script>
+</body>
+
+</html>

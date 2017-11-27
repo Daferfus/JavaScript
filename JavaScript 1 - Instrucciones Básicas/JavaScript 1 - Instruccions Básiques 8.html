@@ -1,0 +1,77 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	un 1er valor numérico		(xxx)
+•	un 2o valor numérico 		(zzz)
+
+Una vez introducidos calculará 8 (ocho) operaciones para mostrar un mensaje que seguirá el siguiente patrón:
+
+	La suma de xxx y zzz es yyy.
+
+	La resta de xxx menos zzz es yyy.
+
+	La resta de zzz menos xxx es yyy.
+
+	El producto de xxx por zzz es yyy.
+
+	La division de xxx entre zzz es yyy.
+
+	La division de zzz entre xxx es yyy.
+
+	El resto resultante de la division entera de xxx 	entre zzz es yyy.
+
+	El resto resultante de la division entera de zzz 	entre xxx es yyy.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nombre1 = prompt("Introduix el primer nombre: ");
+        var nombre2 = prompt("Introduix el segon nombre: ");
+
+        var num1 = parseInt(nombre1);
+        var num2 = parseInt(nombre2);
+
+        var suma = num1 + num2;
+        var resta = num1 - num2;
+        var resta2 = num2 - num1;
+        var multi = num1 * num2;
+        var div = num1 / num2;
+        var div2 = num2 / num1;
+        var rest = num1 / (num2 * "100");
+        var rest2 = num2 / (num1 * "100");
+
+        document.write("La suma de " + num1 + " y " + num2 + " es " + suma + ".");
+
+        document.write("<br>");
+
+        document.write("La diferencia de " + num1 + " y " + num2 + " es " + resta + ".");
+
+        document.write("<br>");
+
+        document.write("La diferencia de " + num2 + " y " + num1 + " es " + resta2 + ".");
+
+        document.write("<br>");
+
+        document.write("El producte de " + num1 + " y " + num2 + " es " + multi + ".");
+
+        document.write("<br>");
+
+        document.write("La divisió de " + num1 + " y " + num2 + " es " + div + ".");
+        document.write("<br>");
+
+        document.write("La divisió de " + num1 + " y " + num2 + " es " + div2 + ".");
+
+        document.write("<br>");
+
+        document.write("El reste resultant de la divisió entera de " + num1 + " entre " + num2 + " es " + rest + ".");
+
+        document.write("<br>");
+
+        document.write("El reste resultant de la divisió entera de " + num2 + " entre " + num1 + " es " + rest2 + ".");
+    </script>
+</body>
+
+</html>

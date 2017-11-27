@@ -1,0 +1,27 @@
+<!--Confeccione un script en Javascript que presente un botón de manera que a cada pulsación nos informe en un mensaje de alerta de la cantidad de pulsaciones efectuadas:
+
+	Pulse para comprobar el número de pulsaciones.
+
+
+El mensaje de alerta:
+
+    Vamos por la xxxª pulsación.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var contador = 0;
+        function alerta() {
+            contador++;
+            alert("Has presionat " + contador + " voltes");
+        }
+    </script>
+    <form>
+        <input type="button" onclick="alerta()" value="Presiona per a comprabar el nombre de pulsacions">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	una 1ª nota			(xxx)
+•	una 2ª nota			(yyy)
+•	una 3ª nota			(zzz)
+•	un nombre			(nnn)
+
+Una vez introducidas mostrará 4 (cuatro) mensajes. Los 3 (tres) primeros:
+
+	La primera nota es xxx.
+	La segunda nota es yyy.
+	La tercera nota es zzz.
+
+
+En caso de que la media aritmética de las 3 notas sea igual o superior a 5 el 4º será:
+
+	Estimado/a nnn ha aprobado con una nota media de y.yyyy.
+
+En caso contrario, no se mostrará el mensaje será:
+
+	Estimado/a nnn con una una nota media de y.yyyyyy.no ha superado los objetivos.
+
+
+La media aritmética se mostrará con 4 (cuatro) o 6 (seis) decimales.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nota1 = parseInt(prompt("Introduix la primera nota: "));
+        var nota2 = parseInt(prompt("Introduix la segona nota: "));
+        var nota3 = parseInt(prompt("Introduix la tercera nota: "));
+        var notaAr = (nota1 + nota2 + nota3) / 3;
+        var nom = prompt("Introduix el teu nom: ");
+
+        document.write("La primera nota és " + nota1);
+        document.write("<br>");
+        document.write("La segona nota és " + nota2);
+        document.write("<br>");
+        document.write("La tercera nota és " + nota3);
+        document.write("<br>");
+
+        if (notaAr >= 5) {
+            document.write("Estimat/da " + nom.bold() + " has aprobat amb una nota mitja de " + notaAr);
+        }
+
+        else {
+            document.write("Estimat/da " + nom.italics() + " amb una nota mitja de " + notaAr + " <u>no</u> has aprobat");
+        }
+    </script>
+</body>
+
+</html>

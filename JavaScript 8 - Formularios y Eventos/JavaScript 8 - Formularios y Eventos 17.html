@@ -1,0 +1,89 @@
+<!--Confeccione un script en Javascript que presente:
+
+	Seleccione su nivel de estudios
+
+Y a continuación 7 (siete) radiobuttons con las siguientes opciones:
+•	Nivel básico
+•	Graduado en ESO
+•	Ciclo Formativo de Grado Medio
+•	Bachiller
+•	Ciclo Formativo de Grado Superior
+•	Grado universitario
+•	Máster universitario
+
+Y un botón “Pulse para comprobar el nivel de estudios seleccionado” que al ser pulsado indique:
+
+•	Ha seleccionado Estudios Básicos.
+•	Ha seleccionado Graduado en ESO.
+•	Ha seleccionado Técnico.
+•	Ha seleccionado Bachillerato.
+•	Ha seleccionado Técnico Superior.
+•	Ha seleccionado Grado universitario.
+•	Ha seleccionado Máster universitario.
+
+Respectivamente.
+
+Apto para select-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Selecciona el teu nivell d'estudis: </label>
+        <br>
+        <br>
+        <input type="radio" name="estudis" id="basic" value="bas" checked/>
+        <label for="basic">Nivel Básico</label>
+        <br>
+        <input type="radio" name="estudis" id="ESO" value="es" />
+        <label for="ESO">Graduado en ESO</label>
+        <br>
+        <input type="radio" name="estudis" id="GM" value="gm" />
+        <label for="GM">Ciclo Formativo de Grado Medio</label>
+        <br>
+        <input type="radio" name="estudis" id="bachiller" value="bach" />
+        <label for="bachiller">Bachiller</label>
+        <br>
+        <input type="radio" name="estudis" id="GS" value="gs" />
+        <label for="GS">Ciclo Formativo de Grado Superior</label>
+        <br>
+        <input type="radio" name="estudis" id="GU" value="gu" />
+        <label for="GU">Grado Universitario</label>
+        <br>
+        <input type="radio" name="estudis" id="MU" value="mu" />
+        <label for="MU">Máster Universitario</label>
+        <br>
+        <br>
+        <input type="button" onClick="comprobar()" value="Comprobar">
+    </form>
+
+    <script>
+        function comprobar() {
+            if (document.getElementById("basic").checked) {
+                alert("Ha seleccionado Estudios Básicos.");
+            }
+            if (document.getElementById("ESO").checked) {
+                alert("Ha seleccionado Graduado en ESO");
+            }
+            if (document.getElementById("GM").checked) {
+                alert("Ha seleccionado Técnico");
+            }
+            if (document.getElementById("bachiller").checked) {
+                alert("Ha seleccionado Bachillerato");
+            }
+            if (document.getElementById("GS").checked) {
+                alert("Ha seleccionado Técnico Superior");
+            }
+            if (document.getElementById("GU").checked) {
+                alert("Ha seleccionado Grado Universitario");
+            }
+            if (document.getElementById("MU").checked) {
+                alert("Ha seleccionado Mçaster universitario");
+            }
+        }
+    </script>
+</body>
+
+</html>

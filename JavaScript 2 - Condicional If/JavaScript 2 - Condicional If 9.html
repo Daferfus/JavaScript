@@ -1,0 +1,43 @@
+<!--Confeccione un script en Javascript que dirima la cualificación de un candidato/a a tenor de las contestaciones acertadas en una prueba de nivel:
+
+•	nombre					nnn
+•	cantidad de preguntas de la prueba		xxx
+•	número de aciertos				xxx
+
+A continuación indicará si el nivel del candidato/a es:
+
+•	superior		(% igual o superior a 90)
+•	medio			(% igual o superior a 75)
+•	básico			(% igual o superior a 50)
+•	no básico		(% inferior a 50)-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nom = prompt("Introduix nom");
+        var cantitatPreguntes = parseInt(prompt("Introduix la cantitat de preguntes"));
+        var nombreEncerts = parseInt(prompt("Introduix el nombre d'encerts"));
+
+        var mitja = (nombreEncerts / cantitatPreguntes) * 100;
+
+        console.log(mitja);
+
+        if (mitja >= 90) {
+            document.write("El nivell de " + nom + " es : Superior.");
+        }
+        else if (mitja >= 75 && mitja < 90) {
+            document.write("El nivell de " + nom + " és: Mitg");
+        }
+        else if (mitja >= 50 && mitja < 75) {
+            document.write("El nivell de " + nom + " és: Básic");
+        }
+        else {
+            document.write("El nivell de " + nom + " és: No básic");
+        }
+    </script>
+</body>
+
+</html>

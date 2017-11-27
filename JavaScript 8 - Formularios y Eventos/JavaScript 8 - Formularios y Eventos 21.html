@@ -1,0 +1,30 @@
+<!--Confeccione un script en Javascript que presente únicamente 1 (un) password cuya cabecera será:
+
+	Introduzca la clave:
+
+de manera que si al salir, la longitud de la clave no se encuentra en el rango de 7 (siete) a 20 (veinte) carácteres muestre un mensaje de alerta:
+
+    La longitud de la clave debe situarse entre los 7 y 	los 20 carácteres.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Introduix la clau: </label>
+        <input type="password" onblur="validar()" id="contrasenya">
+    </form>
+    <script>
+        function validar() {
+            if (document.getElementById("contrasenya").value.length < 7) {
+                alert("La contrasenya no es valida");
+            }
+            else {
+                alert("La contrasenya es valida");
+            }
+        }
+    </script>
+</body>
+
+</html>

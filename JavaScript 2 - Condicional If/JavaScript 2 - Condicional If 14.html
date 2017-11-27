@@ -1,0 +1,24 @@
+<!--Confeccione un script en Javascript que solicitando un único valor:
+
+•	un valor	xxx
+
+Indique a continuación si consta de 1, 2 ó 3 dígitos.-->
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            var nombre = parseInt(prompt("Introduix nombre"));
+
+            if(nombre < 10 && nombre >= 0){
+                document.write(nombre + " sols te una xifra");
+            }
+            else if(nombre >=10 && nombre < 99){
+                document.write(nombre + " te dos xifres");
+            }
+            else{
+                document.write(nombre + " te tres xifres");
+            }
+        </script>
+    </body>
+</html>

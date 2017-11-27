@@ -1,0 +1,40 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un primer cuadro de texto que solicite la introducción de una cadena	xxx
+•	un segundo cuadro de texto que solicite la introducción de otra cadena	yyy
+
+•	y un botón que haga visualizar la concatenación de ambas cadenas en un tercer cuadro de texto:
+
+•	xxxyyy-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function concatenar() {
+            var part1 = document.getElementById("part1").value;
+            var part2 = document.getElementById("part2").value;
+
+            part1 += part2;
+            console.log(part1);
+            document.getElementById("fusionat").value = part1;
+
+        }
+    </script>
+    <form>
+        <label>Introduix la primera part: </label>
+        <input type="name" id="part1">
+        <br>
+        <label>Introduix la segona part: </label>
+        <input type="name" id="part2">
+        <br>
+        <input type="button" onClick="concatenar()" value="Fusionar">
+        <br>
+        <br>
+        <input type="text" id="fusionat" readonly>
+    </form>
+</body>
+
+</html>

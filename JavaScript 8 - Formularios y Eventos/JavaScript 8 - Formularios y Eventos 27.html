@@ -1,0 +1,87 @@
+<!--Confeccione un script en Javascript con 8 (ocho) botones:
+
+•	Abrir una ventana nueva
+•	Abrir ventana con anchura y altura concretas
+•	¼ de ventana disponible
+•	Mensaje de confirmación
+•	Mensaje de alerta
+•	Introducción de datos
+•	Información proporcionada por el objeto screen
+•	Información proporcionada por el objeto navigator
+
+Al pulsar los botones se ha de tener en cuenta:
+
+•	En la ventana nueva aparecerá un mensaje: “Esta es la ventana nueva.”
+•	Las dimensiones de la 2ª ventana son 400 px de ancho y 250 de alto.
+•	La ventana disponible es uno de los datos proporcionados por el objeto “screen”.
+•	El mensaje de confirmación dará la oportunidad de visitar la página de un periódico.
+•	El mensaje de alerta indicará que es un elemento conocido.
+•	Tras la introducción de datos, un mensaje de alerta mostrará la cadena introducida.
+•	El objeto “screen” proporcionará:
+o	Altura disponible
+o	Anchura disponible
+o	Altura
+o	Anchura
+o	Profundidad de color
+•	El objeto “navigator” proporcionará:
+o	Nombre de la aplicación
+o	Versión de la aplicación
+o	Si las cookies están habilitadas
+o	Número de plugins-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <input type="button" onclick="nuevaVentana()" value="Abrir una ventana nueva" />
+        <input type="button" onclick="nuevaVentana2()" value="Abrir una ventana con anchura y altura concretas" />
+        <input type="button" onclick="nuevaVentana3()" value="1/4 de ventana disponible" />
+        <input type="button" onclick="nuevaVentana4()" value="Mensaje de confirmación" />
+        <input type="button" onclick="nuevaVentana5()" value="Mensaje de alerta" />
+        <input type="button" onclick="nuevaVentana6()" value="Introduccion de datos" />
+        <input type="button" onclick="nuevaVentana7()" value="Informacion proporcionada por el objeto screen" />
+        <input type="button" onclick="nuevaVentana8()" value="Informacion proporcionada por el objeto navigator" />
+    </form>
+    <script>
+        function nuevaVentana() {
+            var ventana = window.open();
+            ventana.document.write("Esta es la ventana nueva");
+        }
+        function nuevaVentana2() {
+            window.open("", "", "width=450, height=250")
+        }
+        function nuevaVentana3() {
+            window.open("https://www.argar.cat", "", "width=100, height=400")
+        }
+        function nuevaVentana4() {
+            var confirmacion = confirm("Vols obrir una nova finestra?");
+
+            if (confirmacion === true) {
+                window.open("https://www.argar.cat")
+            }
+        }
+
+        function nuevaVentana5() {
+            alert("Element desconegut");
+        }
+
+        function nuevaVentana6() {
+            var hola = "Hola";
+            var ventana = window.open("", "", "width=200 height:200");
+            ventana.document.write("hola");
+            ventana.opener.write(alert(hola));
+        }
+
+        function nuevaVentana7() {
+            alert("La altura disponible es " + screen.availHeight + " .\nLa amplaria disponible es " + screen.availWidth + " .\nLa altura es " + screen.height + " .\nLa amplaria es " + screen.width + " .\nLa profunditat del color es " + screen.colorDepth);
+        }
+
+        function nuevaVentana8() {
+            alert("El nom de la aplicació es " + navigator.appName + " .\nLa versió de la aplicació es " + navigator.appVersion + " .\nLes cookies están " + navigator.cookieEnabled + " .\nNumero de plugins " + navigator.plugins.length);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un cuadro de texto que solicite la introducción de un valor
+
+•	y un botón que haga visualizar dicho número elevado al cubo en un mensaje de alerta:
+
+•	El cubo de xxxx es yyy.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function cub() {
+            var nombre = document.getElementById("nombre").value;
+            var cub = Math.pow(nombre, 3);
+            alert(cub);
+            console.log(nombre);
+        }
+    </script>
+    <form>
+        <label>Introduix nombre: </label>
+        <input type="number" id="nombre">
+        <input type="button" onClick="cub()" value="Calcular el cub">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción de 5 (cinco) valores e imprima por pantalla:
+
+	La suma de los 5 valores introducidos es: xxx.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            function suma() {
+                var count = 5;
+                var sum = 0;
+                while (count > 0) {
+                    var nombre = parseInt(prompt("Introduix nombre"));
+                    sum += nombre;
+                    count--;
+                }
+                return sum;
+            }
+
+            sumTot = suma();
+
+            document.write("La suma dels 5 valors és " + sumTot + ".");
+        </script>
+    </body>
+</head>
+
+</html>

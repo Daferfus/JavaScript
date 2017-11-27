@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que presente:
+
+	¿Es Vd. mayor de edad?
+
+Y a continuación 2 (dos) radiobuttons con las siguientes opciones:
+•	Sí
+•	No
+
+Y un botón “Pulse para comprobar si puede formar parte del club” que al ser pulsado indique:
+
+•	Siendo mayor de edad, puede formar parte del club.
+
+o
+
+•	Debe esperar para formar parte del club.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>¿Es Vd. mayor de edad?</label>
+        <br>
+        <br>
+        <input type="radio" name="si/no" id="si" value="s" checked/>
+        <label for="si">Sí</label>
+        <br>
+        <input type="radio" name="si/no" id="no" value="n" />
+        <label for="no">No</label>
+        <br>
+        <br>
+        <input type="button" onClick="comprobar()" value="Comprobar">
+    </form>
+    <script>
+        function comprobar() {
+            if (document.getElementById("si").checked) {
+                alert("Benvingut al club.");
+            }
+            else {
+                alert("Ves a plorar-li's als teus pares.");
+            }
+        }
+    </script>
+</body>
+
+</html>

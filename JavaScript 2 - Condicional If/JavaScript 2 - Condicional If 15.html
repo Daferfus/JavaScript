@@ -1,0 +1,25 @@
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var valor1 = parseInt(prompt("Introduix el primer valor"));
+        var valor2 = parseInt(prompt("Introduix el segon valor"));
+        var valor3 = parseInt(prompt("Introduix el tercer valor"));
+
+        document.write("Els nombres introduits son: " + valor1 + ", " + valor2 + ", " + valor3 + ".<br>");
+
+        if (valor1 > valor2 && valor1 > valor3) {
+            document.write("El major dels tres és: " + valor1 + ".");
+        }
+        else if (valor2 > valor1 && valor2 > valor3) {
+            document.write("El major dels tres és: " + valor2 + ".");
+        }
+        else {
+            document.write("El major dels tres és: " + valor3 + ".");
+        }
+    </script>
+</body>
+
+</html>

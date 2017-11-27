@@ -1,0 +1,30 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una frase (serie de palabras separadas por espacios):
+
+	Introduzca la frase:	fff
+
+
+Una vez introducida aparecerá por pantalla cada una de las palabras que compongan la frase en líneas diferentes:
+
+	c
+
+	c
+
+    c-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var frase = prompt("Introduix frase");
+
+        function br() {
+            document.write(frase.split(" ").join("<br>"));
+        }
+
+        br();
+    </script>
+</body>
+
+</html>

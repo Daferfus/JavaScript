@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una cantidad indeterminada de cadenas, hasta que se introduzca “fin” con cualquier combinación de mayúsculas y minúsculas.
+
+	Introduzca una cadena (Cualquier combinación de “fin” 	con MAYÚSCULAS y/o minúsculas para terminar):	ccc
+
+Al finalizar se mostrará por pantalla uno de los siguientes mensajes:
+
+	Se ha(n) introducido xxx palabra(s).
+
+	No se ha introducido ninguna palabra.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        contador = 0;
+        do {
+            var cadena = prompt("Introduix cadena");
+            if(!(cadena === "FIN" || cadena === "FIn" || cadena === "Fin" || cadena === "fin")){
+            paraules = cadena.split(" ");
+            nombreParaules = paraules.length;
+            if (nombreParaules === 0 && (cadena === "FIN" || cadena === "Fin" || cadena === "fin")) {
+                document.write("No s'ha introduit cap paraula");
+            }
+            else {
+                contador += nombreParaules;
+                document.write("S'ha introduit " + contador + " paraules");
+            }
+            }
+        }
+        while (!(cadena === "FIN" || cadena === "FIn" || cadena === "Fin" || cadena === "fin"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un primer cuadro de texto que solicite la introducción de un valor		xxx
+•	
+•	un segundo cuadro de texto que solicite la introducción de otro valor	yyy
+
+•	y un botón que haga visualizar el mayor de ambos valores en un mensaje de alerta:
+
+•	El mayor es xxxyyy.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function major() {
+            var nombre1 = document.getElementById("nombre1").value;
+            var nombre2 = document.getElementById("nombre2").value;
+
+            if (nombre1 > nombre2) {
+                alert("El major es el " + nombre1);
+            }
+
+            else if (nombre2 > nombre1) {
+                alert("El major es el " + nombre2)
+            }
+            else {
+                alert("Son iguals.");
+            }
+        }
+    </script>
+    <form>
+        <label>Primer nombre: </label>
+        <input type="number" id="nombre1">
+        <br>
+        <label>Segon nombre: </label>
+        <input type="number" id="nombre2">
+        <input type="button" onClick="major()" value="Comparar">
+    </form>
+</body>
+
+</html>

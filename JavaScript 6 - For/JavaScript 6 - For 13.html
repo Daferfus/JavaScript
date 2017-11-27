@@ -1,0 +1,48 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 10 (diez) valores para imprimir por pantalla:
+
+•	Cuántos han sido positivos
+•	Cuántos han sido negativos
+•	Cuántos han sido múltiplos de 15
+•	La suma de los valores pares
+
+0 no es positivo ni negativo.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var contadorNeg = 0;
+            var contadorPos = 0;
+            var contadorMult = 0;
+            var sumapar = 0;
+
+            for (i = 0; i < 10; i++) {
+                var valor = parseInt(prompt("Introduix valor"));
+
+                if (valor < 0) {
+                    contadorNeg++;
+                }
+                else {
+                    contadorPos++
+                }
+
+                if (valor % 2 === 0) {
+                    sumapar += valor;
+                }
+
+                if (valor * 3 === 15 || valor === 15) {
+                    contadorMult++;
+                }
+            }
+
+            document.write(contadorPos + " han sigut positius<br>");
+            document.write(contadorNeg + " han sigut negatius<br>");
+            document.write("Cantitat de multiples de 15= " + contadorMult + "<br>");
+            document.write("La suma dels pars es: " + sumapar);
+        </script>
+    </body>
+</head>
+
+</html>

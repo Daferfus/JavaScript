@@ -1,0 +1,50 @@
+<!--Confeccione un script en Javascript que solicite la base y la altura de 3 (tres) triángulos:
+
+	¿Cuánto mide la base?	bbb
+	¿Cuánto mide la altura?	hhh
+
+A continuación de cada par de datos, imprimirá 
+
+	Triángulo número: nnn
+	Base: bbb
+	Altura: hhh
+	Área: aaa
+
+El script finalizará visualizando 1 (uno) de estos 3 (tres) mensajes:
+
+	No hay ningún triángulo con área superior a 12.
+	Sólo un triángulo tiene un área superior a 12.
+	Son xxx los triángulos con un área superior a 12.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var contador = 0;
+
+        for (i = 1; i <= 3; i++) {
+            var nombreTriangul = parseInt(prompt("Introduix el nombre de triangul"));
+            var base = parseInt(prompt("Introduix la mesura de la base"));
+            var altura = parseInt(prompt("Introduix la mesura de la altura"));
+            var area = base * altura / 2;
+
+            document.write("Nombre de triangul " + nombreTriangul + ".<br>");
+            document.write("Base de triangul " + base + ".<br>");
+            document.write("Altura de triangul " + altura + ".<br>");
+            document.write("Area de triangul " + area + ".<br>");
+            document.write("<hr>");
+
+            if (area > 12) {
+                contador++;
+            }
+        }
+
+        document.write(contador + " tienen un area mayor que 12.<br>");
+
+    </script>
+</body>
+
+</html>

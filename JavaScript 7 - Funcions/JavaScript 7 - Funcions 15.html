@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 5 (cinco) sueldos, los almacene en un array de 5 posiciones para mostrar por pantalla:
+
+	Los sueldos introducidos fueron:
+
+	aaa,aa €.
+	bbb,bb €.
+	ccc,cc €.
+	ddd,dd €.
+	eee,ee €.
+
+	El montante invertido en sueldos ha sido: ttt,tt €.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var sold = [];
+            var suma = 0;
+
+            function sumarArray(sold) {
+                for (i = 0; i < 5; i++) {
+                    sold[i] = parseFloat(prompt("Introduix sold"));
+                    suma = suma + sold[i];
+                }
+                document.write("El montant invertint en solds ha sigut: " + suma + "€");
+            }
+
+            sumarArray(sold);
+        </script>
+    </body>
+</head>
+
+</html>

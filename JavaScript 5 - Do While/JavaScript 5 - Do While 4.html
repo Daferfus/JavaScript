@@ -1,0 +1,61 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	un número de documento
+•	una edad
+•	sexo
+
+sucesivamente, un número indeterminado de veces.
+
+El script finaliza al introducir “Ø” como número de documento. Entonces se visualizarán 4 (cuatro) mensajes:
+
+
+	Total de personas censadas: xxx.
+
+	Cantidad de varones: yyy.
+
+	Cantidad de mujeres: zzz.
+
+
+	Cantidad de varones entre 16 y 65 años: ttt.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var contadorHome = 0;
+        var contadorDona = 0;
+        var contadorPersones = 0;
+        var contadorEdat = 0;
+
+        do {
+            var numdocu = parseInt(prompt("Introduix nombre del document"));
+            var edat = parseInt(prompt("Introduix edat"));
+            var sexe = prompt("Introduix sexe");
+
+            if (numdocu != 0) {
+                if (sexe = "Home") {
+                    contadorHome++
+                    if (edat >= 15 && edat <= 65) {
+                        contadorEdat++
+                    }
+                }
+                else if (sexe = "Dona") {
+                    contadorDona++
+                }
+                contadorPersones++
+            }
+        }
+
+        while (numdocu != 0);
+
+        document.write("Total de persones censades: " + contadorPersones + ".");
+        document.write("Cantitat de varons: " + contadorHome + ".");
+        document.write("Cantitat de dones: " + contadorDona + ".");
+        document.write("Cantitat de varons entre 16-35 anys: " + contadorEdat + ".");
+    </script>
+</body>
+
+</html>

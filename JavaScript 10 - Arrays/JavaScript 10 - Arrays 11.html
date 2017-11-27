@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que rellene un vector con 7 (siete) nombres propios -masculinos y femeninos.
+
+Se mostrará en pantalla el contenido del vector:
+
+	Marcos Ana Luis Isabel Jürgen Yanina Carlos
+
+Hecho esto, un método propio de los arrays, los ordenará alfabéticamente y se volverá a mostrar el contenido.
+
+    Ana Carlos Isabel Jürgen Luis Marcos Yanina-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = new Array(7);
+        var nom;
+
+        for (var i = 0; i < array.length; i++) {
+            nom = prompt("Introduix nom");
+            array[i] = nom;
+            document.write(array[i] + "<br>");
+        }
+
+        document.write("<br>");
+        array.sort();
+
+        for (var g = 0; g < array.length; g++) {
+            document.write(array[g] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

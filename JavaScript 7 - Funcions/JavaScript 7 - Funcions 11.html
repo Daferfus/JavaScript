@@ -1,0 +1,30 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción de 3 (tres) valores e imprima por pantalla:
+
+	Los valores introducidos son: xxx, yyy y zzz.
+
+	El promedio es: ???.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var valor1 = parseInt(prompt("Introduix valor 1"));
+            var valor2 = parseInt(prompt("Introduix valor 2"));
+            var valor3 = parseInt(prompt("Introduix valor 3"));
+
+            function promig(valor1, valor2, valor3) {
+                var promig = (valor1 + valor2 + valor3) / 3;
+                return promig;
+            }
+
+            promigResult = promig(valor1, valor2, valor3);
+
+            document.write("Els tres valors introduits son " + valor1 + ", " + valor2 + " i " + valor3 + ".<br>");
+            document.write("El promig es: " + promigResult + ".");
+        </script>
+    </body>
+</head>
+
+</html>

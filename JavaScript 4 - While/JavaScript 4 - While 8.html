@@ -1,0 +1,59 @@
+<!--Confeccione un script en Javascript que imprima en pantalla horizontal o verticalmente los términos correspondientes a la serie de Fibonacci hasta el término menor o igual introducido por teclado:
+
+	Indique cuántos términos de la Serie de Fibonacci 	quiere visualizar: xxx
+
+	1.
+	2.
+	3.
+	5.
+	8.
+	13.
+	21.
+	34.
+	55.
+	89.
+	…
+
+o
+
+	1, 2, 3, … 89, …
+
+El script finaliza con los mensajes:
+
+	El término xxx+1º de la Serie de Fibonacci sería: 	yyy.
+
+	Muchísimas gracias por haber colaborado tan 	generosamente en el crowdfunding para mejorar este 	software.
+
+Primer término ‘.’-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var a = 0;
+        var b = 1;
+        var c = '';
+        var cant = parseInt(prompt("Introduix cantitat"));
+        var count = 0;
+
+        while (cant >= count) {
+            document.write(c + ', ');
+
+            c = a + b;
+            a = b;
+            b = c;
+            count++;
+            var pos = count + 1;
+        }
+
+        var final = b + a;
+
+        document.write("<br>");
+        document.write("El " + pos + "º nombre és el " + final);
+        document.write("<br>" + "<br>" + "Moltes gracies por haber colaborat tan generosament en el crowdfunding per a millorar en este programa");
+    </script>
+</body>
+
+</html>

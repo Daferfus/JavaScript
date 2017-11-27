@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un cuadro de contraseña la introducción de una contraseña		xxx
+
+•	y un botón que compruebe si dicha contraseña consta de al menos, 5 (cinco) caracteres, mostrando los siguientes mensajes de alerta:
+
+•	La longitud de la clave es correcta.
+o bien:
+•	!xxx carácter(es) no cumple(n) los requisitos de longitud mínima de la clave!xxyyy-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function pass() {
+            var contrasenya = document.getElementById("contrasenya").value;
+            if (contrasenya.length < 5) {
+                alert("La contrasenya introduida no cumplix amb els requisits de seguretat");
+            }
+            else {
+                alert("La contrasenya intruida es valida");
+            }
+        }
+    </script>
+    <form>
+        <label>Introduix la contrasenya</label>
+        <input type="password" id="contrasenya" />
+        <br>
+        <input type="button" onClick="pass()" value="Registrar Contrasenya" />
+    </form>
+</body>
+
+</html>

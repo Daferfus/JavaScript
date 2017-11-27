@@ -1,0 +1,51 @@
+<!--Confeccione un script en Javascript que cree la clase “Suma”.
+
+Atributos:
+•	operando1
+•	operando2
+
+Métodos
+•	cargarOperando1
+•	cargarOperando2
+•	retornarResultado
+
+
+Mostrará por pantalla el resultado de 2 (dos) sumas. Los operandos se incluyen en propio script.
+
+	La suma de 5 y 10 es: 15.
+
+    La suma de 70 y 30 es : 100.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        class Suma {
+            cargarPrimerValor(primervalorPrimeraSuma, primervalorSegonaSuma) {
+                this.primervalorPS = primervalorPrimeraSuma;
+                this.primervalorSS = primervalorSegonaSuma;
+            }
+
+            cargarSegonValor(segonvalorPrimeraSuma, segonvalorSegonaSuma) {
+                this.segonvalorPS = segonvalorPrimeraSuma;
+                this.segonvalorSS = segonvalorSegonaSuma;
+            }
+
+            retornarResultat() {
+                var resultat1 = this.primervalorPS + this.segonvalorPS;
+                var resultat2 = this.segonvalorPS + this.segonvalorSS;
+                return 'El resultat de la primera suma és: ' + resultat1 + '<br>El resultat de la segona suma es ' + resultat2;
+            }
+        }
+
+        let suma = new Suma;
+
+        suma.cargarPrimerValor(5, 10);
+        suma.cargarSegonValor(30, 40);
+        document.write(suma.retornarResultat());
+    </script>
+</body>
+
+</html>

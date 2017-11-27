@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que cree 2 (dos) arrays de maneras diferentes.
+
+•	Meses del año		[]
+•	Días de la semana	new Array()
+
+
+Mostrará por pantalla el contenido de todas las  posiciones de ambos.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var mesos = ["Gener", "Febrer", "Març", "Abril", "Maig", "Juny", "Juliol", "Agost", "Septembre", "Octubre", "Novembre", "Decembre"];
+        var dies = new Array(7);
+        dies[0] = "Dilluns";
+        dies[1] = "Dimarts";
+        dies[2] = "Dimecres";
+        dies[3] = "Dijous";
+        dies[4] = "Divendres";
+        dies[5] = "Disabte";
+        dies[6] = "Diumenge";
+
+        for (var i = 0; i < mesos.length; i++) {
+            document.write("La posició " + i + " es: " + mesos[i] + "<br>");
+        }
+        document.write("<br><br>");
+        for (var g = 0; g < dies.length; g++) {
+            document.write("La posició " + g + " es: " + dies[g] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

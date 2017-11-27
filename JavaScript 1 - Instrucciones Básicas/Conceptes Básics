@@ -1,0 +1,32 @@
+Algoritme: Pasos a seguir per a resoldre un problema.
+
+Programa: Conjunt de instruccions que deu seguir un ordinador per a resoldre un problema.
+
+Llenguatge de Programació: Estructura formal amb la que elaborar els programes.
+
+JavaScript: Llenguatge de programació orientat a objectes, interpretat i sensible a majuscules. La seua funció es fer que la página web siga dinámica.
+
+document.write("1er acercament a javascript");
+ambit___acció__info
+
+___________________________________________________________________________________________
+
+Variables - ¿Que és?: Porció de memoria reconeguda baix un nom. Pot cambiar de valor a la 			      llarga de la execució d'un programa.
+	    
+	    Tipus: Alfanumériques, numériques, reals, logiques.
+
+	    Nomenclatura: Te que començar en minúscula (guió baix en cas de ser especial).
+			  No te que coincidar amb la paraula clau.
+			  Autodescriptives.
+	    
+	    Declaració: var nombre
+			var nombre = "Pepe"
+			var edat = 20
+			var estatura = 1.72
+			var solter = true
+
+prompt: Desplega un cuadre que pregunta per les dades.
+
+	prompt("Introduix el nom del pais"; "Espanya");
+
+parseint: Acepta nombres.

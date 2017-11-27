@@ -1,0 +1,28 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 5 (cinco) estaturas consecutivas:
+
+	Introduzca la estatura en cms.: xxx
+
+Una vez introducidas, se mostrará el siguiente mensaje:
+
+	El promedio de la altura de estas cinco personas es 	yy’yy.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var contador = 0;
+        var suma = 0;
+        while (contador < 5) {
+            var estatura = parseInt(prompt("Introduix estatura"));
+            suma = estatura + suma;
+            contador++;
+        }
+
+        promig = suma / 5;
+        document.write("El promig de l'altura de estes cinc persones és " + promig);
+    </script>
+</body>
+
+</html>

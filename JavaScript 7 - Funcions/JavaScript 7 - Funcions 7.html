@@ -1,0 +1,83 @@
+<!--Confeccione un script en Javascript que imprima en pantalla una fecha una fecha con el formato:
+
+	Hoy es xx de yyyy de zzz.
+
+A partir de la introducción por teclado de 3 (tres) parámetros numéricos.
+
+Función con retorno.
+
+
+Falta vigilar la introducción de meses con menos de 31 días-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+
+            dia = parseInt(prompt("Introduix el dia"));
+            mes = parseInt(prompt("Introduix el mes"));
+            any = parseInt(prompt("Introduix el any"));
+
+            var cadena = "Hui es " + dia + " de ";
+
+            function data(mes) {
+                if (mes === 1) {
+                    return "Gener";
+                }
+                else if (mes === 2) {
+                    return "Febrer";
+                }
+                else if (mes === 3) {
+                    return "Març";
+                }
+                else if (mes === 4) {
+                    return "Abril";
+                }
+                else if (mes === 5) {
+                    return "Maig";
+                }
+                else if (mes === 6) {
+                    return "Juny";
+                }
+                else if (mes === 7) {
+                    return "Juliol";
+                }
+                else if (mes === 8) {
+                    return "Agost";
+                }
+                else if (mes === 9) {
+                    return "Septembre";
+                }
+                else if (mes === 10) {
+                    return "Octubre";
+                }
+                else if (mes === 11) {
+                    return "Novembre";
+                }
+                else if (mes === 12) {
+                    return "Decembre";
+                }
+                else {
+                    return false;
+                }
+            }
+
+            mesEscrit = data(mes);
+
+            if (mesEscrit === false) {
+                document.write("El mes no existix");
+            }
+            else {
+
+                cadena += mesEscrit + " de " + any;
+
+                document.write(cadena);
+            }
+
+        </script>
+    </body>
+</head>
+
+</html>

@@ -1,0 +1,52 @@
+<!--Confeccione un script en Javascript que dirima la subida de sueldo de un empleado/a a tenor de si:
+
+•	el sueldo es inferior a 1.001€
+•	la antigüedad es igual o superior a 5 años.
+•	la antigüedad es igual o superior a 10 años.
+
+Si se cumplen las condiciones de sueldo y antigüedad, se aplicará un incremento del:
+
+•	5%	si la antigüedad es superior a 	5 años.
+•	20%	si la antigüedad es superior a 	10 años.
+
+
+Los mensajes a mostrar serán:
+
+	A este empleado se le aplicará un aumento del xx%.
+
+	Por lo que el sueldo de su próxima nómina será de 	yyy’yy €, siendo anteriormente de zzz’zz €.
+
+
+Si no se cumplen las condiciones de sueldo y antigüedad, se mostrará otro mensaje:
+
+    Un sueldo de 70000’00 € queda sin cambios hasta una 	próxima revisión.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var sou = parseInt(prompt("Introduix sou"));
+        var antiguetat = parseInt(prompt("Introduix antigüetat"));
+        var aument1 = (sou * 5) / 100;
+        var aument2 = (sou * 20) / 100;
+        var soumaxim1 = sou + aument1;
+        var soumaxim2 = sou + aument2
+
+        if (sou < 1001) {
+            if (antiguetat >= 10) {
+                document.write("A este empleat se l'aplica un aument del 20%, per lo que el sou de la próxima nómina sera de " + soumaxim2 + "€");
+            }
+            else if (antiguetat >= 5) {
+                document.write("A este empleat se l'aplica un aument del 5%, per lo que el sou de la próxima nómina será de " + soumaxim1 + "€");
+            }
+        }
+
+        else {
+            document.write("El sou de este empleat no será revisat");
+        }
+    </script>
+</body>
+
+</html>

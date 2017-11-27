@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una cadena a fin de averiguar si dicha cadena es palíndromo.
+
+	Introduzca el candidato a palíndromo:	ppp
+
+
+Una vez introducida la cadena se mostrará por pantalla uno de los siguientes mensajes:
+
+	ppp no se lee igual en ambas direcciones, razón por la cual 	no es palíndromo.
+	
+	ppp se lee igual en ambas direcciones, por lo tanto es un 	palíndromo.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var cadena = prompt("Introduix cadena: ");
+
+        function palindromo(cadena) {
+            var cadenaSenseEspais = cadena.split(" ").join("");
+            var cadenaReves = cadenaSenseEspais.split("").reverse().join("");
+
+            if (cadenaSenseEspais === cadenaReves) {
+                document.write("Es un palindromo");
+            }
+            else {
+                document.write("No es un palindromo");
+            }
+        }
+
+        palindromo(cadena);
+    </script>
+</body>
+
+</html>

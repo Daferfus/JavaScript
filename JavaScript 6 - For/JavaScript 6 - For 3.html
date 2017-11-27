@@ -1,0 +1,23 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 10 (diez) valores numéricos, indicando con un mensaje cuanto suman los 5 (cinco) últimos valores:
+
+	La suma de los  cinco últimos valores introducidos 	es: xxx.
+
+El prompt indicará cuántos valores quedan por introducir.-->
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            var suma = 0;
+            for (i=9; i>0; i--){
+                var nombre = parseInt(prompt("Introduix un nombre"));
+
+                if (i<=5){
+                    suma+= nombre;
+                }
+            }
+
+            document.write("La suma dels cinc últims valors introduits és de: " + suma);
+        </script>
+    </body>
+</html>

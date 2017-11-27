@@ -1,0 +1,42 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una dirección de e-mail a fin de averiguar si dicha dirección contiene el carácter “@” y en qué posición.
+
+	Introduzca la dirección e-mail:	ddd
+
+
+Una vez introducida la dirección, si contiene el carácter “@”, se mostrará por pantalla los siguientes mensajes:
+
+	El mail ddd contiene el carácter "@".
+
+	Concretamente en la posición xxx.
+
+
+En caso contrario:
+
+	El mail ddd no contiene el carácter "@".-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var email = prompt("Introduix e-mail");
+
+        function aroba(email) {
+            if (email.indexOf("@") != -1) {
+                document.write("Te @<br>");
+            }
+            else {
+                document.write("No te @<br>");
+            }
+
+            var posicio = email.indexOf("@") + 1;
+            document.write("Es trova en la posicio " + posicio);
+
+        }
+
+        aroba(email);
+    </script>
+</body>
+
+</html>

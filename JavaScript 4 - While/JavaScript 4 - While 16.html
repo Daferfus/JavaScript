@@ -1,0 +1,37 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 3 (cinco) valores consecutivos:
+
+	Introduzca un valor: xxx
+
+
+Una vez introducidos, se mostrarán dos (dos) mensajes:
+
+	Cantidad de valores pares introducidos: yyy
+
+	Cantidad de valores impares introducidos: zzz-->
+
+
+<html>
+    <head></head>
+    <body>
+        <script>
+            var contador = 0;
+            var contadorPars = 0;
+            var contadorImpars = 0;
+
+            while(contador < 3){
+                var valor = parseInt(prompt("Introduix valor"));
+                if(valor % 2 === 0){
+                    contadorPars++
+                    contador++;
+                }
+                else{
+                    contadorImpars++
+                    contador++;
+                }
+            }
+
+            document.write("Cantitat de valors pars introduits: " + contadorPars+".<br>");
+            document.write("Cantitat de valors impars introduits: " + contadorImpars+".<br>");
+        </script>
+    </body>
+</html>

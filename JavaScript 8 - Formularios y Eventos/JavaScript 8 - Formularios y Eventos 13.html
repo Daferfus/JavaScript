@@ -1,0 +1,104 @@
+<!--Confeccione un script en Javascript que presente 4 (cuatro) listas desplegables con tres opciones cada una:
+•	¿Cómo se dice "Rojo" en inglés?
+•	Blue
+•	Green
+•	Red
+
+•	¿Cómo se dice "Ventana" en inglés?
+•	Window
+•	Door
+•	Bedroom
+
+•	¿Cómo se dice "Gato" en inglés?
+•	Dog
+•	Cat
+•	Lion
+
+•	¿Cómo se dice "Hombre" en inglés?
+•	Women
+•	Man
+•	Child
+
+
+La pulsación sobre un botón indicará en un mensaje de alerta las respuestas correctas así como el porcentaje de aciertos:
+
+•	Ha contestado xxx pregunta(s) correctamente. Es decir, el yyy%.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>¿Cómo se dice "Rojo" en inglés?</label>
+        <br>
+        <select name="colors" id="color">
+            <option value="blue">Blue</option>
+            <option value="red">Red</option>
+            <option value="brown">Brown</option>
+        </select>
+        </br>
+        <label>¿Cómo se dice "Ventana" en inglés?</label>
+        <br>
+        <select name="finestres" id="finestra">
+            <option value="window">Window</option>
+            <option value="frypan">Frypan</option>
+            <option value="stalker">Stalker</option>
+        </select>
+        </br>
+        <label>¿Cómo se dice "Gato" en inglés?</label>
+        <br>
+        <select name="gats" id="gat">
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="fenix">Fenix</option>
+        </select>
+        </br>
+        <label>¿Cómo se dice "Hombre" en inglés?</label>
+        <br>
+        <select name="homes" id="home">
+            <option value="woman">Woman</option>
+            <option value="crack">Crack</option>
+            <option value="man">Man</option>
+        </select>
+        </br>
+        <br>
+        <input type="button" onClick="validar()" value="Comparar Respuestas">
+    </form>
+    <script>
+
+        function validar() {
+
+            var contador = 0;
+
+            if (document.getElementById("color").value === "red") {
+                contador++;
+            }
+            if (document.getElementById("finestra").value === "window") {
+                contador++
+            }
+            if (document.getElementById("gat").value === "cat") {
+                contador++
+            }
+            if (document.getElementById("home").value === "man") {
+                contador++
+            }
+
+            if (contador === 4) {
+                alert("Pleno");
+            }
+            else if (contador === 3) {
+                alert("Ben fet");
+            }
+            else if (contador === 2) {
+                alert("Regular");
+            }
+            else {
+                alert("Torna");
+            }
+            console.log(contador);
+        }
+    </script>
+</body>
+
+</html>

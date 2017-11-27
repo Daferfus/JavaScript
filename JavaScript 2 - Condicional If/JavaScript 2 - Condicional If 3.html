@@ -1,0 +1,33 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	una 1ª nota			(xxx)
+•	una 2ª nota			(yyy)
+•	una 3ª nota			(zzz)
+
+Una vez introducidas mostrará un mensaje en caso de que la media aritmética de las 3 notas sea igual o superior a 5:
+
+	Aprobado con t.tttt.
+
+En caso contrario, no se mostrará mensaje alguno.
+
+La media aritmética se mostrará con 4 (cuatro decimales).
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nota1 = parseInt(prompt("Introduix la primera nota: "));
+        var nota2 = parseInt(prompt("Introduix la segona nota: "));
+        var nota3 = parseInt(prompt("Introduix la tercera nota: "));
+        var notaPro = (nota1 + nota2 + nota3) / 3;
+
+        if (notaPro.toFixed(4) >= 5) {
+            document.write("Aprobat amb un " + notaPro.toFixed(4));
+        }
+    </script>
+</body>
+
+</html>

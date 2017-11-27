@@ -1,0 +1,48 @@
+<!--Confeccione un script en Javascript que solicite 1 (un) valor comprendido entre 1 (uno) y 5 (cinco).
+
+Mostrará dicho número escrito con letras en Español/Castellano.
+
+Función con retorno.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+
+            function numero(valor) {
+                if (valor === 1) {
+                    return "Uno.";
+                }
+                else if (valor === 2) {
+                    return "Dos.";
+                }
+                else if (valor === 3) {
+                    return "Tres.";
+                }
+                else if (valor === 4) {
+                    return "Cuatro.";
+                }
+
+                else if (valor === 5) {
+                    return "Cinco.";
+                }
+
+                else {
+                    return "Valor Incorrecto";
+                }
+            }
+
+            valor = parseInt(prompt("Introduix valor: "));
+
+            numeroescrito = numero(valor);
+
+            document.write(numeroescrito);
+
+
+        </script>
+    </body>
+</head>
+
+</html>

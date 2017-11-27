@@ -1,0 +1,87 @@
+<!--Confeccione un script en Javascript que presente una lista desplegable con tres opciones:
+•	Pop
+•	Rock
+•	New Age
+
+y 3 (tres) cuadros de texto para indicar:
+
+•	Número de índice seleccionado del objeto Select
+•	Texto seleccionado
+•	Valor asociado
+
+Esta información vendrá dada en la propia declaración del select.-->
+
+<html>
+
+<head>
+    <style>
+        label {
+            visibility: hidden
+        }
+
+        input {
+            visibility: hidden
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <select name="estils" id="estil" onchange="busqueda()">
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+        </select>
+        </br>
+        <label id="label1">Número de índice seleccionado del objeto SELECT: </label>
+        <input type="text" id="id">
+        <br>
+        <label id="label2">Texto seleccionado: </label>
+        <input type="text" id="texto">
+        <br>
+        <label id="label3">Valor asociado: </label>
+        <input type="text" id="valor">
+    </form>
+    <script>
+        function busqueda() {
+            var valor = document.getElementById("estil");
+            if (valor.value === "pop") {
+                document.getElementById("label1").style.visibility = "visible";
+                document.getElementById("label2").style.visibility = "visible";
+                document.getElementById("label3").style.visibility = "visible";
+                document.getElementById("id").style.visibility = "visible";
+                document.getElementById("id").value = 0;
+                document.getElementById("texto").style.visibility = "visible";
+                document.getElementById("texto").value = "Pop";
+                document.getElementById("valor").style.visibility = "visible";
+                document.getElementById("valor").value = "The Beatles";
+            }
+
+            else if (valor.value === "rock") {
+                document.getElementById("label1").style.visibility = "visible";
+                document.getElementById("label2").style.visibility = "visible";
+                document.getElementById("label3").style.visibility = "visible";
+                document.getElementById("id").style.visibility = "visible";
+                document.getElementById("id").value = 1;
+                document.getElementById("texto").style.visibility = "visible";
+                document.getElementById("texto").value = "Rock";
+                document.getElementById("valor").style.visibility = "visible";
+                document.getElementById("valor").value = "The Rolling Stones";
+            }
+
+            else {
+                document.getElementById("label1").style.visibility = "visible";
+                document.getElementById("label2").style.visibility = "visible";
+                document.getElementById("label3").style.visibility = "visible";
+                document.getElementById("id").style.visibility = "visible";
+                document.getElementById("id").value = 2;
+                document.getElementById("texto").style.visibility = "visible";
+                document.getElementById("texto").value = "Metal";
+                document.getElementById("valor").style.visibility = "visible";
+                document.getElementById("valor").value = "Iron Maiden";
+            }
+        }
+    </script>
+</body>
+
+</html>

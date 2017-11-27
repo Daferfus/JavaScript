@@ -1,0 +1,34 @@
+<!--Confeccione un script en Javascript que rellene un vector con 10 (diez) valores, algunos de ellos repetidos y los mostrará por pantalla:
+
+
+	Vector inicial:
+
+	0	7	2	3	4	2	6	2	8	2
+
+Con el mismo método de los scripts anteriores reemplazaremos uno de los elementos repetidos por otros 2 diferentes:
+
+	Una vez reemplazado cada "2" por "1 1", el vector 	queda:
+
+    0 7 1 1 3 4 1 1 6 1 1 8 1 1 -->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = [0, 7, 2, 3, 4, 2, 6, 2, 8, 2]
+
+        document.write("Array inicial: " + array);
+        document.write("<br>");
+
+        array.splice(2, 1, 1, 1);
+        array.splice(6, 1, 1, 1);
+        array.splice(9, 1, 1, 1);
+        array.splice(12, 1, 1, 1);
+
+        document.write("Una volta reemplazat cada '2' per '1 1', el array queda: " + array);
+    </script>
+</body>
+
+</html>

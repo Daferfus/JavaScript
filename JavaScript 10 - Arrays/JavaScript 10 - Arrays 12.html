@@ -1,0 +1,73 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un número indeterminado de números enteros para guardarlos en un vector hasta que se introduzca el “0”.
+
+Una vez finalizada la introducción, se mostrará por pantalla el contenido del vectortal cual se han introducido:
+
+	Los valores se han introducido siguiendo este orden:
+	1 2 10 20 9 990 31 7 700
+
+Con un método propio de los arrays se colocarán en orden inverso:
+
+	Vector numérico original en orden inverso de 	introducción:
+	700 7 31 990 9 20 10 2 1
+
+Con otro método propio de los arrays se ordenarán alfabéticamente:
+
+	Vector numérico ordenado alfabéticamente
+	1 10 2 20 31 7 700 9 990
+
+Aplicando una función al método anterior se ordenarán numéricamente en orden ascendente:
+
+	Vector numérico ordenado ascendentemente
+	1 2 7 9 10 20 31 700 990
+
+Con otro método propio de los arrays quedarán ordenados numéricamente en orden descendente:
+
+	Vector numérico ordenado descendentemente
+    990 700 31 20 10 9 7 2 1 -->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = [];
+        var index = 0;
+        var nombre = 0;
+        do {
+            nombre = parseInt(prompt("Introduix nombre"));
+            if (nombre !== 0) {
+                array[index] = nombre;
+                index++;
+            }
+        } while (nombre != 0);
+
+        document.write("Els valors númerics s'han introduix en este orde:<br>" + array.join("<br>"));
+
+
+
+        array.reverse();
+
+        document.write("<br>Array númeric original en orde invers de introducció<br>" + array.join("<br>"));
+
+
+
+        array.sort();
+
+        document.write("<br>Array númeric ordenat alfabéticament<br>" + array.join("<br>"));
+
+
+
+        array.sort(function (a, b) { return a - b });
+
+        document.write("<br>Array númeric ordenat ascendentment<br>" + array.join("<br>"));
+
+
+
+        array.reverse(function (a, b) { return a - b });
+
+        document.write("<br>Array númeric ordenat descendentment<br>" + array.join("<br>"));
+    </script>
+</body>
+
+</html>

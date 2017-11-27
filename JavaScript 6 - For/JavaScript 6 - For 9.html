@@ -1,0 +1,37 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	El número de una base.							bbb
+•	El primer valor por el que se elevará la base anterior.			vvv
+•	El incremento / decremento que se aplicará al exponente anterior.		iii
+•	El número de potencias a realizar.						nnn
+
+
+
+Imprimirá por pantalla tantos resultados como se hayan solicitado:
+
+	ttt ^ vvv = rrr.
+	ttt ^ vvv+iii = rrr.
+	…
+	(nnn veces)-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var base = parseInt(prompt("Introduix el valor de la base"));
+        var potencia = parseInt(prompt("Introduix el valor de la potencia"));
+        var increment = parseInt(prompt("Introduix el valor del increment"));
+        var cantitat = parseInt(prompt("Introduix el valor de la cantitat"));
+
+        for (i = 0; i < cantitat; i++) {
+            potencia += increment;
+            var cuadrat2 = Math.pow(base, potencia);
+            document.write(base + "^" + potencia + " = " + cuadrat2 + "<br>");
+
+        }
+    </script>
+</body>
+
+</html>

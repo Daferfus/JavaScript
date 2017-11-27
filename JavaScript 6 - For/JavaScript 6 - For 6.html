@@ -1,0 +1,40 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	El número de una tabla de multiplicar.				ttt
+•	El primer valor por el que se multiplicará el número anterior.	vvv
+•	El incremento / decremento que se aplicará al valor anterior.	iii
+•	El número de multiplicaciones a realizar.				nnn
+
+
+
+Imprimirá por pantalla tantos resultados como se hayan solicitado:
+
+	ttt x vvv = rrr.
+	ttt x vvv+iii = rrr.
+	…
+	(nnn veces)
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var tabla = parseFloat(prompt("Introduix el nombre de la tabla de multiplicar"));
+        var terme = parseFloat(prompt("Introduix el primer terme a multiplicar"));
+        var inc = parseFloat(prompt("Introduix el increment"));
+        var cantitat = parseFloat(prompt("Introduix cantitat"));
+
+        for (terme; terme <= cantitat; terme += inc) {
+            document.write(tabla + "*" + terme + " = " + tabla * terme + "<br>");
+        }
+
+        document.write(tabla + "<br>");
+        document.write(terme + "<br>");
+        document.write(inc + "<br>");
+        document.write(cantitat + "<br>")
+    </script>
+</body>
+
+</html>

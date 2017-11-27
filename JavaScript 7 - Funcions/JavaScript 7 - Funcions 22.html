@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una frase y a continuación una palabra, a fin de averiguar si la palabra se encuentra en la oración.
+
+	Introduzca una frase:	fff
+
+	Introduzca una palabra:	ppp
+
+
+Al finalizar se mostrará por pantalla uno de los siguientes mensajes:
+
+	Como podrá comprobar, la frase "fff no contiene la 	palabra: "ppp".
+	
+    La frase "fff" contiene la palabra: "ppp".-->
+    
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function comparativa() {
+            var frase = prompt("Introduix una frase");
+            var paraula = prompt("Introduix una paraula");
+
+            if (frase.indexOf(paraula) >= 0) {
+                document.write("La frase " + frase + " conté la paraula: " + paraula + ".");
+            }
+            else {
+                document.write("Com podrá comprobar, la frase " + frase + " no conté la paraula " + paraula + ".");
+            }
+        }
+
+        comparativa();
+    </script>
+</body>
+
+</html>

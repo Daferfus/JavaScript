@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que presente únicamente 2 (dos) cajas de texto cuyos prompts serán:
+
+	nombre
+	e-mail
+
+de manera que cualquiera de los prompts se borren al ganar el foco y si al salir siguen estando en blanco muestre un mensaje de alerta:
+
+    Debe introducir datos.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <input type="text" onfocus="borrarNombre()" onblur="mostrar()" id="nombre" placeholder="nombre">
+        <br>
+        <input type="text" onfocus="borrarEmail()" onblur="mostrar()" id="email" placeholder="e-mail">
+        <br>
+    </form>
+    <script>
+        onblur === false
+        function mostrar() {
+            alert("No debes dejar el campo vacio");
+            onblur === true;
+        }
+        function borrarNombre() {
+            document.getElementById("nombre").value = "";
+        }
+        function borrarEmail() {
+            document.getElementById("email").value = "";
+        }
+    </script>
+</body>
+
+</html>

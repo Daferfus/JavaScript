@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que solicite:
+
+•	un día del mes en cifras	dd
+•	un mes del año en cifras	mm
+•	un año				aaaa
+
+En caso de que el día introducido sea 25 y el mes 12, mostrará:
+
+	El dd/mm/aaaa es el día de Navidad.
+
+En caso contrario:
+
+    El dd/mm/aaaa no es el día de Navidad.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var dia = prompt("Introduix el dia: ");
+        var mes = prompt("Introduix el mes: ");
+        var any = prompt("Introduix el any: ");
+        var fecha = dia + "/" + mes + "/" + any;
+
+        if (fecha === "25/12/" + any) {
+            document.write("El " + fecha + " es el dia de Navidad.");
+        }
+        else {
+            document.write("El " + fecha + " no es el dia de Navidad.");
+        }
+    </script>
+</body>
+
+</html>

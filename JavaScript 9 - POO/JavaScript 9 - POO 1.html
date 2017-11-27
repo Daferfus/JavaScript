@@ -1,0 +1,58 @@
+<!--Confeccione un script en Javascript que cree la clase “Cliente”.
+
+Atributos:
+•	nombre
+•	saldo
+
+Y sus métodos:
+•	depositar
+•	extraer
+
+Mostrará por pantalla los datos de un cliente, cuyos datos se incluyen en propio script.
+
+	Nombre del cliente: Dimitri
+
+
+	El saldo actual de Diego es: 1200 €
+
+	El saldo tras depositar 120 € es: 1320 €
+
+    El saldo tras retirar 1000 € es: 320 €-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        class Client {
+            constructor(nom, sou) {
+                this.nom = nom;
+                this.sou = sou;
+            }
+
+            depositar(diners) {
+                this.sou += diners;
+                return 'Després de introduir els diners el sou ha quedat com ' + this.sou + '€<br>';
+            }
+
+            extraure(diners) {
+                this.sou -= diners;
+                return 'Després de retirar-ne els diners el sou ha quedat com ' + this.sou + '€';
+            }
+
+            mostrarDades() {
+                return 'Nom del client: ' + this.nom + '<br>El sou actual es de ' + this.sou + '€<br>';
+            }
+
+        }
+
+        let client = new Client('David', 50);
+
+        document.write(client.mostrarDades());
+        document.write(client.depositar(1000));
+        document.write(client.extraure(50));
+    </script>
+</body>
+
+</html>

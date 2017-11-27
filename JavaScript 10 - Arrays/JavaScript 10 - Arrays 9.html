@@ -1,0 +1,43 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un número indeterminado de valores.
+
+2 (dos) métodos propios de los arrays, guardarán los valores menores a 100 (cien) en las posiciones iniciales del vector, mientras que los mayores a 100 (cien) se guardarán en las posiciones finales.
+
+El 0 (cero) se recortará del vector (con un método propio de los arrays).
+
+Finalmente, se imprimirán por pantalla todos los valores introducidos:
+
+	 55
+	 44
+	 66
+	222
+	999
+    111-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        array = [];
+        valor = 0;
+        index = 0;
+
+        do {
+            valor = parseInt(prompt("Introduix valor"));
+            if (valor < 100) {
+                array.unshift(valor);
+            }
+            else {
+                array.push(valor);
+            }
+        } while (valor != 0);
+        array.shift(valor);
+
+        for (var i = 0; i < array.length; i++) {
+            document.write(array[i] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

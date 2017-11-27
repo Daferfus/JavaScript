@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción de 3 (tres) valores e imprima por pantalla:
+
+	Los valores introducidos son: xxx, yyy y zzz.
+
+	El mayor de ellos es: ???.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var nombre1 = parseInt(prompt("Introduix el primer nombre"));
+            var nombre2 = parseInt(prompt("Introduix el segon nombre"));
+            var nombre3 = parseInt(prompt("Introduix el tercer nombre"));
+
+            function mayor(nombre1, nombre2, nombre3) {
+                if (nombre1 > nombre2 && nombre1 > nombre3) {
+                    return nombre1;
+                }
+                else if (nombre2 > nombre1 && nombre2 > nombre3) {
+                    return nombre2;
+                }
+                else {
+                    return nombre3;
+                }
+            }
+
+            gran = mayor(nombre1, nombre2, nombre3);
+
+            document.write("El major d'ells és " + gran);
+        </script>
+    </body>
+</head>
+
+</html>

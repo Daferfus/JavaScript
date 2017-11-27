@@ -1,0 +1,79 @@
+<!--Confeccione un script en Javascript que cree las clases:
+
+Apuesta
+•	Métodos
+o	cargarApuesta
+o	Verificarpremio
+Bombo
+•	Atributo
+o	numero
+•	Método
+o	sorteo
+
+
+Se solicitarán por teclado 2 (dos) apuestas.
+Se sortearán números del 1 al 10.
+
+Se mostrará por pantalla:
+
+	Número ganador:	xxx
+
+	Para la 1ª apuesta eligió: yyy
+	Para la 2ª apuesta eligió: zzz
+
+En caso de coincidir apuestas y sorteo:
+
+
+    La Xª apuesta ha ganado.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        class Aposta {
+            carregarAposta(aposta1, aposta2) {
+                this.aposta1 = aposta1;
+                this.aposta2 = aposta2;
+            }
+
+            verificarPremi() {
+                if (this.aposta1 === 10) {
+                    document.write("La primera aposta ha guanyat.<br>");
+                }
+                else if (this.aposta2 === 10) {
+                    document.write("La segona aposta ha guanyat.<br>");
+                }
+                else {
+                    document.write("No has guanyat l'aposta.<br>");
+                }
+            }
+        }
+
+        class Bombo {
+            sorteig(nombre) {
+                this.nombre = nombre;
+                var sorteig = Math.round(Math.random() * 10);
+
+                if (nombre === sorteig) {
+                    document.write("Bombo: Has tingut sort.");
+                }
+                else {
+                    document.write("Bombo: No has tingut sort.");
+                }
+            }
+        }
+
+        let aposta = new Aposta;
+
+        aposta.carregarAposta(parseInt(prompt("Introduix la primera aposta")), parseInt(prompt("Introduix la segona aposta")));
+        aposta.verificarPremi();
+
+        let bombo = new Bombo;
+
+        bombo.sorteig(1);
+    </script>
+</body>
+
+</html>

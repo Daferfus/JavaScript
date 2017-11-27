@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una cantidad (xxx) comprendida entre 1 y 99.
+
+En caso de que la cantidad introducida no cumpla los requisitos (1-99) mostrará un mensaje indicando que supera o no llega al rango:
+
+	xxx es superior a 99, por lo tanto este	script no será 	preciso.
+
+o
+
+	xxx es inferior a 1, por lo tanto este script no será 	preciso.
+
+
+En cualquier caso, mostrará un mensaje en caso de constar de un solo dígito:
+
+	xxx tiene un solo dígito.
+
+En caso de constar de 2 (dos) dígitos:
+
+	xxx tiene dos dígitos.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var digit = prompt("Introduix un nombre entre 1-99");
+
+        if (digit > 99) {
+            document.write(digit + " es superior a 99, per lo tant pot ser que este script no siga precis");
+        }
+
+        else if (digit < 1) {
+            document.write(digit + " es inferior a 1, per lo tant pot ser que este script no siga precis");
+        }
+
+        else if (digit < 10) {
+            document.write("El nombre de digits es 1");
+        }
+
+        else {
+            document.write("El nombre de digits es 2");
+        }
+    </script>
+</body>
+
+</html>

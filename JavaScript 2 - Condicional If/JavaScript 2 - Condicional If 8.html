@@ -1,0 +1,82 @@
+<!--Confeccione un script en Javascript que calcule una media ponderada solicitando la introducción de 3 (tres) notas y 3 (tres) pesos:
+
+•	una 1ª nota
+•	el peso de la 1ª nota
+•	una 2ª nota
+•	el peso de la 2ª nota
+•	una 3ª nota
+•	el peso de la 3ª nota
+
+
+Una vez introducidas verificará si la suma de los pesos supera o no llega a 100. En tal caso mostrará 2 (dos) mensajes:
+
+	Los pesos no suman 100.
+
+	Procedo a corregirlos.
+
+
+En tal caso, se reasignarán los pesos:
+
+•	Peso de la 1ª nota	->	50%
+•	Peso de la 2ª nota	->	33%
+•	Peso de la 3ª nota	->	17%
+•	
+
+	Estimado/a nnn ha aprobado con una nota media de y.yyyy.
+
+A continuación, se calculará la media ponderada. En caso de ser igual o superior a 5 mostrará 2 (dos) mensajes:
+
+	La media ponderada es igual o superior a 5, 	concretamente xxx.					(en letra más grande)
+
+	¡¡Enhorabuena!!				(en color rojo y letra grande)
+
+
+En caso de ser inferior a 5 mostrará 2 (dos) mensajes:
+
+	La media ponderada es igual o superior a 5, 	concretamente xxx.	(en letra más grande pero inferior al caso anterior)
+
+	¡¡No se dé por vencid@!!
+		(en color naranja y letra grande pero inferior a la de ¡¡Enhorabuena!!)
+-->
+
+<html>
+
+<head></head>
+
+    <body>
+        <script>
+            var nota1 = parseInt(prompt("Introduix nota 1"));
+            var peso1 = parseInt(prompt("Introduix el pes de la nota 1"));
+            var nota2 = parseInt(prompt("Introduix nota 2"));
+            var peso2 = parseInt(prompt("Introduix el pes de la nota 2"));
+            var nota3 = parseInt(prompt("Introduix la nota 3"));
+            var peso3 = parseInt(prompt("Introduix el pes de la nota 3"));
+            var pesoTotal = peso1 + peso2 + peso3;
+           
+
+            if (pesoTotal !== 100) {
+                document.write("Els pesos no sumen 100. Procedix a corregirlos");
+                peso1 = 50;
+                peso2 = 33;
+                peso3 = 17;
+            }
+            var mediaPond = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / 100;
+
+            var aprobat = "La nota ponderada es igual o superior a 5. Concretament" + mediaPond + ".";
+            var enhorabona = "Enhorabona!!";
+            var suspes = "La mitja... es inferior a 5. Concretament</b>" + mediaPond + ".";
+            var motivacio = "No es done per vençut/da";
+
+            if (mediaPond >= 5) {
+                document.write(aprobat.fontsize(7) + "<br>");
+                document.write(enhorabona.fontsize(10).fontcolor("red"));
+            }
+
+            else {
+                document.write(suspes.fontsize(5));
+                document.write("<br>");
+                document.write(motivacio.fontsize(7).fontcolor("orangered"));
+            }
+        </script>
+    </body>
+</html>

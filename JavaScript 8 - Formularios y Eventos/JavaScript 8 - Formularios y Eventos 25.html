@@ -1,0 +1,23 @@
+<!--Confeccione un script en Javascript con 2 (dos) cajas de texto de manera que al acabar de cargar la página, el primero de ellos gane el foco.-->
+
+<html>
+
+<head></head>
+
+<body onload="foco()">
+
+    <form>
+        <label>Introduzca su nombre:</label>
+        <input type="text" id="text1" />
+        <br>
+        <label>Introduce la edad:</label>
+        <input type="text" id="text2" />
+    </form>
+    <script>
+        function foco() {
+            document.getElementById("text1").focus();
+        }
+    </script>
+</body>
+
+</html>

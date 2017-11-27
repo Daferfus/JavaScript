@@ -1,0 +1,79 @@
+<!--Confeccione un script en Javascript que solicite 2 (coordenadas):
+
+•	x
+•	y
+
+A continuación mostrará:
+
+	Ha introducido x como coordenada x y y como 	coordenada y.
+
+	Lo que nos sitúa en el z cuadrante.
+
+
+Debe tener en cuenta que si:
+
+	ambas coordenadas son positivas, nos situamos en el 	1er cuadrante.
+
+	x (abcisas) es positiva e y (ordenadas) negativa, nos 	situamos en el 2º 	cuadrante.
+
+	ambas coordenadas son negativas, nos situamos en el 	3er cuadrante.
+
+	x (abcisas) es negativa e y (ordenadas) positiva, nos 	situamos en el 4º cuadrante.
+
+(sentido contrario a las agujas del reloj)
+
+	Alguna de las coordenadas es Ø, nos situamos sobre 	uno de los ejes.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var x = parseInt(prompt("Introduix la coordenada x"));
+        var y = parseInt(prompt("Introduix la coordenada y"));
+
+        if (x > 0 & y > 0) {
+            document.write("Has introduit " + x + " com a coordenada x i " + y + " com a coordanada y.");
+            document.write("</br>")
+            document.write("Primer quadrant.");
+        }
+        if (x > 0 & y < 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " com coordenada y.");
+            document.write("</br>")
+            document.write("Cuart quadrant.");
+        }
+
+        if (x < 0 & y < 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " com coordenada y.");
+            document.write("</br>")
+            document.write("Tercer cuadrant");
+        }
+
+        if (x < 0 & y > 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " com coordenada y.");
+            document.write("</br>");
+            document.write("Segó cuadrant.");
+        }
+
+        if (x === 0 & y === 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " com coordenada y.");
+            document.write("</br>");
+            document.write("Estás sobre el cuadrant");
+        }
+
+        if (x === 0 & y > 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " com coordenada y.");
+            document.write("</br>");
+            document.write("Estás sobre la coordenada de origen x");
+        }
+
+        if (x > 0 & y === 0) {
+            document.write("Has introduit " + x + " com coordenada x i " + y + " como coordenada y.");
+            document.write("</br>");
+            document.write("Estás sobre la coordenada de origen y.");
+        }
+    </script>
+</body>
+
+</html>

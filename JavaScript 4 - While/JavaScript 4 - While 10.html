@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 10 (diez) notas consecutivas:
+
+	Introduzca la nota: xxx
+
+Una vez introducidas, se mostrarán los siguientes mensajes:
+
+	Hay zzz alumno/a(s) con nota(s) mayor(es) o igual(es) 	a 5.
+
+    Hay www alumno/a(s) con nota(s) inferior(es) a 5.-->
+    
+<html>
+    <head></head>
+        <body>
+            <script>
+                count= 0;
+                suma= 0;
+                aprobats = 0;
+                suspesos = 0;
+
+                while(count <= 10){
+                    var valor = parseInt(prompt("Introduix valor"));
+                    if (valor > 4){
+                        aprobats++;
+                    }
+                    else {
+                        suspesos++;
+                    }
+                    count++;
+                }
+                document.write("Hi ha " +aprobats+ " alumne(s) amb notes(a) major(s) o igual(s) a 5");
+                document.write("<br>");
+                document.write("Hi ha " +suspesos+ " alumne(s) amb notes(a) inferior(s) o igual(s) a 5");
+            </script>
+        </body>
+    </head>
+</html>

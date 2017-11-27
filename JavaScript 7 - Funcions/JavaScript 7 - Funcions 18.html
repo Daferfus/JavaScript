@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que solicite un número comprendido entre el 0 (cero) y el 9 (nueve):
+
+	¿Introduzca un valor entre 0 y 9	nnn
+
+En caso de introducir un número fuera de este rango, se volverá a solicitar el valor.
+
+Este valor se comparará con otro obtenido al azar. En caso de ser iguales se visualizarán los siguientes mensajes:
+
+	¡Enhorabuena! ha ganado el sorteo, puesto que el 	número premiado ha sido el nnn.
+
+	Recuerde que es buena costumbre celebrar los premios.
+
+En caso contrario:
+
+	Sentimos comunicarle que en esta ocasión no ha sido 	agraciado, puesto que Vd. apostó por el nnn y el 	número premiado ha sido el mmm.
+
+	Repita y tendrá suerte.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var min = 0;
+        var max = 10;
+
+        var azar = Math.random() * (max - min);
+        azar = Math.round(azar);
+
+        function random(azar) {
+            var nombre = parseInt(prompt("Introduix un valor entre 0 i 9"));
+
+            if (nombre === azar) {
+                document.write("¡Enhorabona! Has guanyat el sorteig, ja que el nombre premiat és " + azar + "<br>.");
+                document.write("Recorda que es bona costum celebrar els premis.")
+            }
+            else {
+                document.write("Sentim comunicar-te que en esta ocasió no has sigut agraciat, ja que has apostat per el " + nombre  + " i el nombre premiat ha sigut el " + azar + ".");
+            }
+        }
+
+        random(azar);
+    </script>
+</body>
+
+</html>

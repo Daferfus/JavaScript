@@ -1,0 +1,61 @@
+<!--Confeccione un script en Javascript que almacene 5 (cinco) valores comprendidos entre 1 (uno) y 1,000 (mil) obtenidos aleatoriamente.
+
+A continuación se imprimirán por pantalla los 5 (cinco) valores y en línea aparte la la suma de los 2 (dos) últimos.
+
+Hecho esto, un método, propio de los arrays, eliminará esas 2 (dos) últimas posiciones que añadirá cada cantidad en la última posición del vector.
+
+Por pantalla se imprimirá la nueva longitud del vector.
+
+Finalmente, se imprimirán por pantalla, los elementos que aún permanecen en el vector.
+
+	111
+	222
+	333
+	444
+	555
+
+	La suma de los dos últimos elementos es: 777.
+
+	Dimensión actual del vector: xxx posiciones.
+
+	Los elementos que aún permanecen en el vector son:
+
+	111
+	222
+    333-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = new Array(5);
+        var suma = 0;
+
+        for (var i = 0; i < array.length; i++) {
+            array[i] = Math.round(Math.random() * 1000);
+            document.write(array[i] + "<br>");
+            if (i === 3) {
+                suma = suma + array[i];
+            }
+            else if (i === 4) {
+                suma = suma + array[i];
+            }
+        }
+        console.log(array);
+        document.write("<br>");
+        document.write("La suma dels dos últims elements es de " + suma + "<br>");
+        array.pop();
+        array.pop();
+        console.log(array.length);
+        document.write("Dimensió actual del array " + array.length + "<br><br>");
+        document.write("Els elements que permaneixen en el array son <br>");
+        for (var g = 0; g < array.length; g++) {
+            document.write(array[g] + "<br>");
+        }
+
+    </script>
+</body>
+
+</html>

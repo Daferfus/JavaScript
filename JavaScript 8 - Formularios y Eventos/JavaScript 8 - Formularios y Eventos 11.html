@@ -1,0 +1,107 @@
+<!--Confeccione un script en Javascript que presente 3 (tres) listas desplegables con tres opciones cada una:
+
+•	Procesador
+•	Intel i3
+•	Intel i5
+•	Intel i7
+•	Monitor
+•	Samsung 20’’
+•	Samsung 22’’
+•	Samsung 26’’
+•	Disco duro
+•	Disco duro 500 Gb
+•	Disco duro 1 Tb
+•	Disco duro 3 Tb
+
+
+Al pulsar un botón se calculará la suma del precio de los 3 (tres) artículos, que aparecerá en un cuadro de texto.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Procesador: </label>
+        <select name="procesadors" id="procesador" onchange="preuprocesador()">
+            <option value="intel9">Intel9</option>
+            <option value="intel7">Intel7</option>
+            <option value="intel5">Intel5</option>
+        </select>
+        </br>
+        <input type="text" id="preup" readonly>
+        <br>
+        <label>Grafica: </label>
+        <select name="grafiques" id="grafica" onchange="preugrafica()">
+            <option value="GTX1000">GTX1000</option>
+            <option value="GTX900">GTX900</option>
+            <option value="GTX800">GTX800</option>
+        </select>
+        <br>
+        <input type="text" id="preug" readonly>
+        <br>
+        <label>Disc Dur: </label>
+        <select name="discos" id="disc" onchange="preudisc()">
+            <option value="700GB">700GB</option>
+            <option value="500GB">500GB</option>
+            <option value="300GB">300GB</option>
+        </select>
+        <br>
+        <input type="text" id="preud" readonly>
+        <br>
+        <br>
+
+        <input type="text" id="preu" readonly>
+        <br>
+        <br>
+
+        <input type="button" onClick="preutotal()" value="Preu Total">
+    </form>
+    <script>
+
+        function preuprocesador() {
+            var valor = document.getElementById("procesador");
+            if (valor.value === "intel9") {
+                parseInt(document.getElementById("preup").value = 400);
+            }
+            else if (valor.value === "intel7") {
+                parseInt(document.getElementById("preup").value = 200);
+            }
+            else {
+                parseInt(document.getElementById("preup").value = 90);
+            }
+        }
+
+        function preugrafica() {
+            var valor = document.getElementById("grafica");
+            if (valor.value === "GTX1000") {
+                parseInt(document.getElementById("preug").value = 400);
+            }
+            else if (valor.value === "GTX900") {
+                parseInt(document.getElementById("preug").value = 200);
+            }
+            else {
+                parseInt(document.getElementById("preug").value = 90);
+            }
+        }
+
+        function preudisc() {
+            var valor = document.getElementById("disc");
+            if (valor.value === "700GB") {
+                parseInt(document.getElementById("preud").value = 100);
+            }
+            else if (valor.value === "500GB") {
+                parseInt(document.getElementById("preud").value = 50);
+            }
+            else {
+                parseInt(document.getElementById("preud").value = 40);
+            }
+        }
+
+        function preutotal() {
+            document.getElementById("preu").value = parseInt(document.getElementById("preup").value) + parseInt(document.getElementById("preug").value) + parseInt(document.getElementById("preud").value);
+        }
+    </script>
+</body>
+
+</html>

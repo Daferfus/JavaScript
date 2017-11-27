@@ -1,0 +1,32 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	un 1er valor numérico		(xxx)
+•	un 2o valor numérico		(zzz)
+
+Una vez introducidos calculará 2 (dos) operaciones para mostrar un mensaje que seguirá el siguiente patrón:
+
+	La suma de xxx y zzz es yyy.
+	
+	El producto de xxx y zzz es yyy.
+-->
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        var valor1 = parseInt(prompt("Introduix el primer valor"));
+        var valor2 = parseInt(prompt("Introduix el segon valor"));
+
+        var suma = valor1 + valor2;
+        var producte = valor1 * valor2;
+
+        document.write("La suma de " + valor1 + " y " + valor2 + " es " + suma + ".");
+        document.write("<br>");
+        document.write("El producte de " + valor1 + " y " + valor2 + " es " + producte + ".");
+    </script>
+</body>
+
+</html>

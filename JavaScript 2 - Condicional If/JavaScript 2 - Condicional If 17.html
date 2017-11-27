@@ -1,0 +1,118 @@
+<!--Confeccione un script en Javascript que solicite 3 (tres) valores:
+
+•	un 1er valor	xxx
+•	un 2º valor	yyy
+•	un 3er valor	zzz
+
+Si los 3 (tres) valores son menores que 10, mostrará:
+
+	Todos los valores introducidos son menores que 10.
+
+
+Si los 3 (tres) valores son iguales a 10, mostrará:
+
+	Todos los valores son 10.
+
+
+
+	¡¡Pleno!!
+
+Si alguno de los 3 (tres) valores es mayor que que 10, indicará cuál o cuáles lo es/son:
+
+	El 1er / 2º / 3er valor es mayor que 10: xxx/yyy/zzz.
+
+	El 1er / 2º / 3er valor es mayor que 10: xxx/yyy/zzz.
+
+
+Si los 3 (tres) valores son mayores que 10, mostrará:
+
+	El 1er valor es mayor que 10: xxx.
+
+	El 2º  valor es mayor que 10: yyy.
+
+	El 3er valor es mayor que 10: zzz.
+
+
+
+	Los 3 valores son mayores que 10.
+
+
+
+	¡¡Línea!!-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Introduix el primer valor: "));
+        var num2 = parseInt(prompt("Introduix el segón valor: "));
+        var num3 = parseInt(prompt("Introduix el tercer valor: "));
+        var linea = "Línea!!";
+        var ple = "Plé!!";
+
+        if (num1 < 10) {
+            document.write("El 1er valor és menor que 10.");
+            document.write("<br>");
+        }
+        if (num2 < 10) {
+            document.write("El 2º valor és menor que 10.");
+            document.write("<br>");
+        }
+        if (num3 < 10) {
+            document.write("El 3er valor és menor que 10.");
+            document.write("<br>");
+        }
+        if (num1 < 10 & num2 < 10 & num3 < 10) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Tots els valors introduits son menors que 10.");
+        }
+
+        if (num1 > 10) {
+            document.write("El 1er valor és major que 10.");
+            document.write("<br>");
+        }
+        if (num2 > 10) {
+            document.write("El 2º valor és major que 10.");
+            document.write("<br>");
+        }
+        if (num3 > 10) {
+            document.write("El 3er valor és major que 10.");
+            document.write("<br>");
+        }
+        if (num1 > 10 & num2 > 10 & num3 > 10) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Els 3 valors son majors que 10.");
+            document.write("<br>");
+            document.write("<br>");
+            document.write(linea.fontsize(10).fontcolor("grey"));
+        }
+        if (num1 === 10) {
+            document.write("El 1er valor es igual a 10.");
+            document.write("<br>");
+        }
+        if (num2 === 10) {
+            document.write("El 2º valor es igual que 10.");
+            document.write("<br>");
+        }
+        if (num3 === 10) {
+            document.write("El 3er valor es igual que 10.");
+            document.write("<br>");
+        }
+        if (num1 === 10 & num2 === 10 & num3 === 10) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Tots els valors son 10");
+            document.write("<br>");
+            document.write(ple.fontsize(10).fontcolor("green"));
+        }
+    </script>
+</body>
+
+</html>

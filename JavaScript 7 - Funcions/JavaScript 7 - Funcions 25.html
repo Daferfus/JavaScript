@@ -1,0 +1,44 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una cadena a fin de realizar las diferentes operaciones.
+
+	Introduzca la cadena:	ccc
+
+
+Una vez introducida aparecerán por pantalla los siguientes mensajes:
+
+	La cadena introducida es: ccc.
+
+	La primera mitad de la frase es: cc.
+
+	El último carácter es: l.
+
+	ccc escrito al revés es: ccc.
+
+	Insertando guiones: c-c-c-
+
+	En ccc hay: xxx vocal(es) no acentuada(s).
+(tener en cuenta las vocales acentuadas)-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var frase = prompt("Introduix frase");
+
+        function modding(frase) {
+            document.write("La cadena introduida és: " + frase + "<br>");
+            document.write("La primera mitat de la frase és: " + frase.substr(0, frase.length / 2) + "<br>");
+            document.write("El últim carácter és : " + frase.slice(-1) + "<br>");
+            var fraseSenseEspais = frase.split(" ").join("");
+            document.write(frase + " escrit al revés és " + fraseSenseEspais.split("").reverse().join("") + "<br>");
+            var dash = frase.split("").join("-");
+            document.write("Insertant guions " + dash + "<br>");
+            document.write("En " + frase + " hi han: " + frase.match(/[aeiouáàéèíìóòúù]/gi).length + " vocals acentuades.");
+        }
+
+        modding(frase);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!--Confeccione un script en Javascript que solicite:
+
+•	1er término de una serie	xxx
+•	Último término de la serie	yyy
+•	Incremento de la serie	zzz
+
+Se mostrarán los siguientes mensajes:
+
+	El inicio de la serie es: xxx.
+
+	El fin de la serie es: yyy o el término anterior más 	aproximado.
+
+	El incremento de la serie es: zzz.
+
+A continuación se imprimirá la porción de serie correspondiente.
+
+El script finaliza con el mensaje:
+
+	Visite mi sitio web si quiere participar en el 	crowdfunding para mejorar este software.
+
+Prevenir Primer término inferior al último si incremento positivo
+-8, -88 y -1 de incremento
+…-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nombre = parseInt(prompt("Introduix el primer nombre"));
+        var limit = parseInt(prompt("Introduix el ultim nombre"));
+        var incremental = parseInt(prompt("Introduix el multiple"));
+
+        document.write("El inici de la serie és: " + nombre);
+        document.write("El fi de la serie és: " + limit);
+        document.write("El increment de la serie és: " + incremental);
+
+        while (nombre * incremental <= limit) {
+            document.write(nombre * incremental);
+            document.write("</br>");
+            nombre++;
+        }
+
+        document.write("Visita el meu lloco web si vols participar en el crowdfunding per a millorar este programa");
+    </script>
+</body>
+
+</html>

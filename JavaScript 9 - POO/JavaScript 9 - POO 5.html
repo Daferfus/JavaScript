@@ -1,0 +1,52 @@
+<!--Confeccione un script en Javascript que cree la clase “persona”.
+
+Atributos:
+•	nombre
+•	edad
+
+Método
+•	imprimirNombre
+
+En un vector de 4 (cuatro) posiciones cargaremos un nombre y una edad  para cada persona.
+
+
+Se ha de recorrer el vector a fin de y mostrar por pantalla el nombre y la edad de la persona o personas con mayor edad.
+
+Los nombres y edades se incluyen en propio script.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        class Persona {
+            imprimirNombre() {
+                var nom = new Array(4);
+                nom[0] = "Juan";
+                nom[1] = "Jaime";
+                nom[2] = "Jorge";
+                nom[3] = "Juanjo";
+
+                var edat = new Array(4);
+                edat[0] = 10;
+                edat[1] = 20;
+                edat[2] = 56;
+                edat[3] = 16;
+
+                var edatmajor = edat.sort();
+
+                for (var i = 0; i < 4; i++) {
+                    if (edat[i] === edatmajor[3]) {
+                        document.write("El mes major es " + nom[i - 1] + " de edat " + edat[i]);
+                    }
+                }
+            }
+        }
+
+        let persona = new Persona;
+        document.write(persona.imprimirNombre());
+    </script>
+</body>
+
+</html>

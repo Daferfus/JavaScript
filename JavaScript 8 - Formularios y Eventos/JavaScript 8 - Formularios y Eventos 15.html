@@ -1,0 +1,50 @@
+<!--Confeccione un script en Javascript que presente 3 (tres) checkboxes con las siguientes opciones:
+•	Fútbol
+•	Baloncesto
+•	Tenis
+
+Y un botón “Pulse para comprobar los deportes seleccionados” que al ser pulsado enumere los deportes selecionados:
+
+•	El/los deporte(s) seleccionado(s)es/son: xxx yyy zzz.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <input type="checkbox" name="futbol" id="Futbol" checked/>
+        <label for="Futbol">Fútbol</label>
+        <br>
+        <input type="checkbox" name="baloncesto" id="Baloncesto" />
+        <label for="Baloncesto">Baloncesto</label>
+        <br>
+        <input type="checkbox" name="tenis" id="Tenis">
+        <label for="Tenis">Tenis</label>
+        <br>
+        <input type="checkbox" name="natacion" id="Natacion">
+        <label for="Natacion">Natación</label>
+        <br>
+        <br>
+        <input type="button" onClick="contar()" value="Contar Valores con Tic">
+    </form>
+    <script>
+        function contar() {
+            var alerta = alert("El/los deporte(s) seleccionado(s) es/son:");
+            if (document.getElementById("Futbol").checked === true) {
+                alerta += alert("Futbol,");
+            }
+            if (document.getElementById("Baloncesto").checked === true) {
+                alerta += alert("Baloncesto,");
+            }
+            if (document.getElementById("Tenis").checked === true) {
+                alerta += alert("Tenis,");
+            }
+            if (document.getElementById("Natacion").checked === true) {
+                alerta += alert("Natacion");
+            }
+        }
+    </script>
+</body>
+
+</html>

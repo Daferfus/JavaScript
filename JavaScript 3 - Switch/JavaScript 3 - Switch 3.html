@@ -1,0 +1,74 @@
+<!--Confeccione un script en Javascript que solicite en letras minúsculas en singular y sin acentos, 1 (uno) de los siguientes artículos de ferretería:
+
+•	Clavos		0’59 € la cajita
+•	Tornillos	0’32 € la cajita
+•	Alcayatas	0’48 € la cajita
+•	Cáncamos	0’79 € la cajita
+•	Buscafases	de oferta.
+•	Teflón		de oferta
+
+Al introducir correctamente el nombre del artículo, un mensaje con el precio de dicho artículo.
+
+En cualquier otro caso se mostrará los siguientes mensajes:
+
+	Sentimos habernos quedado sin (nombre del artículo 	introducido en plural).
+y
+	Disculpen las molestias.
+
+Todas las consultas finalizan con la pregunta:
+
+    ¿Alguna consulta más?-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var producte = prompt("Introduix producte");
+        switch (producte) {
+            case "claus":
+                document.write("El preu de " + producte + " es 0'59€ la caixa");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            case "cargols":
+                document.write("EL preu de " + producte + " es de 0'32€ la caixa");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            case "calus":
+                document.write("El preu de " + producte + " es de 0'48€ la caixa");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            case "cancams":
+                document.write("El preu de " + producte + " es de 0'79€ la caixa");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            case "buscafases":
+                document.write("El preu de " + producte + " esta d'oferta");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            case "teflo":
+                document.write("El preu de " + producte + " esta d'oferta");
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+                break;
+
+            default:
+                document.write("Sentim haber-nos quedat sense " + producte + ". Discula les molesties.")
+                document.write("</br>")
+                document.write("Alguna consulta més?");
+        }
+    </script>
+</body>
+
+</html>

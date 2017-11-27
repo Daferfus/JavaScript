@@ -1,0 +1,40 @@
+<!--Confeccione un script en Javascript que presente:
+
+	Redacte su propuesta en menos de 2.000 carácteres
+
+a continuación 1 (un) textarea de 10 (diez) filas (altura) y 50 (cincuenta) columnas (anchura) y seguidamente un botón “¿Supera los 2.000 carácteres?”, que al ser pulsado indique:
+
+•	La propuesta no supera los 2.000 carácteres.
+
+o
+•	La propuesta supera los 2.000 carácteres.
+
+Según el caso.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Redacte su propuesta en menos de 2.000 cáracteres</label>
+        <br>
+        <br>
+        <textarea cols="50" rows="10" id="texto"></textarea>
+        <br>
+        <br>
+        <input type="button" onClick="comprobar()" value="Comprobar">
+    </form>
+    <script>
+        function comprobar() {
+            if (document.getElementById("texto").value.length >= 2000) {
+                alert("Aixo no ho va a llegir ni Deu. Per favor, tracta de explicar la vostra proposta d'una forma més resumida.");
+            }
+            else {
+                alert("Proposta arreplegada.")
+            }
+        }
+    </script>
+</body>
+
+</html>

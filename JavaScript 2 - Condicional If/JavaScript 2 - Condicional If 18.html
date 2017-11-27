@@ -1,0 +1,122 @@
+<!--Confeccione un script en Javascript que solicite 3 (tres) valores:
+
+•	un 1er valor		xxx
+•	un 2º valor		yyy
+•	un 3er valor		zzz
+
+y un comparador:
+
+•	un comparador	ccc
+
+Si los 3 (tres) valores son menores que el comparador, mostrará:
+
+	Todos los valores introducidos son menores que ccc.
+
+
+Si los 3 (tres) valores son iguales al comparador 10, mostrará:
+
+	Todos los valores son ccc.
+
+
+
+	¡¡Pleno!!
+
+Si alguno de los 3 (tres) valores es mayor que que e1 comparador, indicará cuál o cuáles lo es/son:
+
+	El 1er / 2º / 3er valor es mayor que ccc: xxx/yyy/zzz.
+
+	El 1er / 2º / 3er valor es mayor que ccc: xxx/yyy/zzz.
+
+
+Si los 3 (tres) valores son mayores que e1 comparador, mostrará:
+
+	El 1er valor es mayor que ccc: xxx.
+
+	El 2º valor es mayor que ccc: yyy.
+
+	El 3er valor es mayor que ccc: zzz.
+
+
+	Los 3 valores son mayores que ccc.
+
+
+
+    ¡¡Línea!!-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Introduix el primer valor: "));
+        var num2 = parseInt(prompt("Introduix el segundo valor: "));
+        var num3 = parseInt(prompt("Introduix el tercer valor: "));
+        var comparador = parseInt(prompt("Introduix el nombre a comparar: "));
+        var linea = "Línea!!";
+        var ple = "Plé!!";
+
+        if (num1 < comparador) {
+            document.write("El 1er valor és menor que " + comparador);
+            document.write("<br>");
+        }
+        if (num2 < comparador) {
+            document.write("El 2º valor és menor que " + comparador);
+            document.write("<br>");
+        }
+        if (num3 < comparador) {
+            document.write("El 3er valor és menor que " + comparador);
+            document.write("<br>");
+        }
+        if (num1 < comparador & num2 < comparador & num3 < comparador) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Tots els valors introduits son menors que " + comparador);
+        }
+
+        if (num1 > comparador) {
+            document.write("El 1er valor és major que " + comparador);
+            document.write("<br>");
+        }
+        if (num2 > comparador) {
+            document.write("El 2º valor és major que " + comparador);
+            document.write("<br>");
+        }
+        if (num3 > comparador) {
+            document.write("El 3er valor és major que " + comparador);
+            document.write("<br>");
+        }
+        if (num1 > comparador & num2 > comparador & num3 > comparador) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Els 3 valors son majors que " + comparador);
+            document.write("<br>");
+            document.write("<br>");
+            document.write(linea.fontsize(10).fontcolor("grey"));
+        }
+        if (num1 === comparador) {
+            document.write("El 1er valor es igual a " + comparador);
+            document.write("<br>");
+        }
+        if (num2 === comparador) {
+            document.write("El 2º valor es igual que " + comparador);
+            document.write("<br>");
+        }
+        if (num3 === comparador) {
+            document.write("El 3er valor es igual que " + comparador);
+            document.write("<br>");
+        }
+        if (num1 === comparador & num2 === comparador & num3 === comparador) {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Tots els valors son " + comparador);
+            document.write("<br>");
+            document.write(ple.fontsize(10).fontcolor("green"));
+        }
+    </script>
+</body>
+
+</html>

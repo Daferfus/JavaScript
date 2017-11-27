@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que imprima en pantalla horizontal o verticalmente 25 términos de la serie:
+
+	Ø.
+	11.
+	22.
+	…
+	264.
+
+o
+
+	Ø, 11, 22, … 264,
+
+El script finaliza con el mensaje:
+
+    Muchas gracias por utilizar este software.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nombre = 0;
+
+        while (nombre * 11 <= 25) {
+            document.write(nombre * 11);
+            document.write("</br>");
+            nombre++;
+        }
+        document.write("</br>");
+        document.write("Moltes gracies per gastar aquest programa");
+    </script>
+</body>
+
+</html>

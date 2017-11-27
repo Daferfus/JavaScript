@@ -1,0 +1,41 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un primer cuadro de contraseña para la introducción de una contraseña	xxx
+•	un segundo cuadro de contraseña para la introducción de la misma contraseña xxx
+
+•	y un botón que compruebe si ambas contraseñas coincidan o no, mostrando los siguientes mensajes de alerta:
+
+•	Ambas claves son iguales.
+o bien:
+•	Las claves no coinciden.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function comparar() {
+            var pass1 = document.getElementById("pass1").value;
+            var pass2 = document.getElementById("pass2").value;
+
+            if (pass1 === pass2) {
+                alert("Les contrasenyes coincidixen");
+            }
+            else {
+                alert("Les contrasenyes no coincidixen");
+            }
+        }
+    </script>
+    <form>
+        <label>Introduix la contrasenya: </label>
+        <input type="password" id="pass1" />
+        <br>
+        <label>Instroduix de nou la contrasenya: </label>
+        <input type="password" id="pass2" />
+        <br>
+        <input type="button" onClick="comparar()" value="Loguejar-se" />
+    </form>
+</body>
+
+</html>

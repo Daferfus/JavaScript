@@ -1,0 +1,53 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un número indefinido de valores:
+
+	Introduzca un valor: xxx
+
+
+para indicar el acumulado parcial por cada introducción:
+
+	El valor acumulado hasta el momento es: yyy.
+	
+	El valor acumulado hasta el momento es: zzz.
+	… 
+
+	El valor acumulado hasta el momento es: ttt.
+
+
+El script finaliza al introducir “9999”, entonces se mostrarán 2 (dos) últimos mensajes:
+
+	El valor acumulado total ha sido: vvv.
+
+y si el acumulado definitivo es superior, inferior o igual a cero:
+
+    El valor acumulado definitivo es ?????? a cero.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        maxim = 0;
+
+        do {
+            var valor = parseInt(prompt("Introduix valor"));
+            if (valor != 999) {
+                maxim += valor
+                document.write("El valor acumulat hasta el moment és " + máxim)
+            }
+        }
+
+        while (valor != 999);
+
+        document.write("El valor acumulat total ha sigut " + maxim + ".");
+        document.write("<br>");
+        if (maxim > 0) {
+            document.write("El valor acumulat definitiu és superior a 0.");
+        }
+        else {
+            document.write("El valor acumulat definitiu és inferior a 0.");
+        }
+    </script>
+</body>
+
+</html>

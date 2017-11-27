@@ -1,0 +1,39 @@
+<!--Confeccione un script en Javascript que almacene una cantidad indeterminada de donaciones en posiciones no contiguas a tenor del código de colaborador como índice del vector, hasta que se introduzca “0” como código de colaborador.
+
+Al finalizar la introducción de datos, mostrará por pantalla:
+
+	Cantidad efectiva de colaboraciones: xxx.
+	Total donado por todos los colaboradores: yyy.
+
+    Este array disperso tiene: zzz posiciones.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = [];
+        var index;
+        var donacio;
+        var contador = 0;
+        var sumaArray = 0;
+
+        do {
+            index = parseInt(prompt("Introduix index del array"));
+            if (index != 0) {
+                donacio = parseInt(prompt("Introduix donacio"));
+                array[index] = donacio;
+                sumaArray = sumaArray + array[index];
+                contador++;
+            }
+        } while (index != 0);
+
+        document.write("Cantidad efectiva de colaboradores: " + contador + "<br>");
+        document.write("Total donat per tots els colaboradoras: " + sumaArray + "€<br>");
+        document.write("Este array dispers te " + array.length + " posicions");
+
+    </script>
+</body>
+
+</html>

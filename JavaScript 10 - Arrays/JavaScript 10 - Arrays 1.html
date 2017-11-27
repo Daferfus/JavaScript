@@ -1,0 +1,37 @@
+<!--Confeccione un script en Javascript que cree 6 (seis) arrays de maneras diferentes:
+
+Sin elementos
+Indicando número de elementos
+Indicando el contenido
+
+tanto con paréntesis como con corchetes.
+
+
+Mostrará por pantalla el contenido de la 1ª posición de cada uno de ellos.-->
+
+<hml>
+
+    <head></head>
+
+    <body>
+        <script>
+            var arraySinElementos = new Array();
+            arraySinElementos[0] = "Circo";
+            var arraySinElementosCorchete = [];
+            arraySinElementosCorchete[0] = 5;
+            var arrayNumerodeElementos = new Array(6);
+            arrayNumerodeElementos[0] = "Paccio";
+            var arrayNumerodeElementosCorchete = [6];
+            arrayNumerodeElementosCorchete[0] = 1;
+            var arrayconContenido = new Array(1, "Juanjo");
+            var arrayconContenidoCorchete = [1, "Juanjo"];
+
+            document.write(arraySinElementos[0] + "<br>");
+            document.write(arraySinElementosCorchete[0] + "<br>");
+            document.write(arrayNumerodeElementos[0] + "<br>");
+            document.write(arrayNumerodeElementosCorchete[0] + "<br>");
+            document.write(arrayconContenido[0] + "<br>");
+            document.write(arrayconContenidoCorchete[0] + "<br>"); 
+        </script>
+    </body>
+</hml>

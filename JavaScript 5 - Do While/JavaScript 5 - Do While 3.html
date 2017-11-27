@@ -1,0 +1,61 @@
+<!--Confeccione un script en Javascript que solicite:
+
+	Un número de cuenta	xxx
+	Un nombre			aaa
+	Un saldo			yyy
+
+En cada introducción se mostrará un mensaje indicando si el saldo es:
+
+•	acreedor	(>Ø)
+•	deudor		(<Ø)
+•	nulo		(= Ø)
+
+	aaa tiene un saldo ...
+
+
+El último cliente será aquel cuyo número de cuenta sea Ø (cero). En este momento se visualizará el total de saldos acreedores:
+
+    La suma total de saldos acreedores es zzz-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        soldmaxim = 0;
+
+        do {
+            var nombreCompte = parseInt(prompt("Introduix nombre de compte"));
+            var nom = prompt("Introduix nom de compte");
+            var sold = parseInt(prompt("Introduix sold"));
+
+            if (sold > 0) {
+                soldmaxim += sold
+                document.write(nom + " - té un sold acreedor<br>");
+            }
+
+            else if (sold < 0) {
+                document.write(nom + " - té un sold deudor<br>");
+                soldmaxim -= sold;
+            }
+
+            else {
+                document.write(nom + " - té un sold null<br>");
+            }
+        }
+
+        while (nombreCompte != 0);
+
+        document.write("La suma total dels solds acreedors és de " + soldmaxim + "€.");
+        document.write("<br>");
+        if (soldmaxim > 0) {
+            document.write("El valor es superior a 0");
+        }
+        else {
+            document.write("El valor es inferior a 0");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción de 3 (tres) valores e imprima por pantalla:
+
+	Los valores introducidos son: xxx, yyy y zzz.
+
+	Ordenados de menor a mayor son: ???, ???.y ???.
+
+sort ordena alfabéticamente. Hay que llamar una función que retorna a – b (the compare function)-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var valor1 = parseInt(prompt("Introduix el primer valor"));
+            var valor2 = parseInt(prompt("Introduix el segón valor"));
+            var valor3 = parseInt(prompt("Introduix el tercer valor"));
+
+            function ordenar(valor1, valor2, valor3) {
+                var valores = [valor1, valor2, valor3];
+                valores.sort(function (a, b) {
+                    return a - b
+                });
+                document.write(valores.join(", ") + ".");
+            }
+
+            ordenar(valor1, valor2, valor3);
+        </script>
+    </body>
+</head>
+
+</html>

@@ -1,0 +1,76 @@
+<!--Confeccione un script en Javascript que almacene en un vector 10 (diez) valores enteros aleatorios comprendidos entre 1 y 500.
+
+A continuación lo recorrerá y almacenará en otros 2 vectores los valores inferiores y superiores a 250 respectivamente.
+
+Mostrará por pantalla:
+
+	Tamaño del vector inicial: 10.
+
+	Tamaño del vector con valores inferiores a 250: 3.
+
+	Tamaño del tercer con valores superiores a 250: 7.
+
+
+
+	Elementos del vector inicial: …
+
+	Los valores inferiores a 250 son: …
+
+    Los valores superiores a 250 son: …-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var arrayMenor = [];
+        var g = 0;
+        var f = 0;
+        var arrayMajor = [];
+        var array = new Array(10);
+        array[0] = Math.round(Math.random() * 500);
+        array[1] = Math.round(Math.random() * 500);
+        array[2] = Math.round(Math.random() * 500);
+        array[3] = Math.round(Math.random() * 500);
+        array[4] = Math.round(Math.random() * 500);
+        array[5] = Math.round(Math.random() * 500);
+        array[6] = Math.round(Math.random() * 500);
+        array[7] = Math.round(Math.random() * 500);
+        array[8] = Math.round(Math.random() * 500);
+        array[9] = Math.round(Math.random() * 500);
+
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] < 250) {
+                arrayMenor[g] = array[i];
+                g++;
+            }
+            else {
+                arrayMajor[f] = array[i];
+                f++;
+            }
+        }
+
+        document.write("Tamany del array inicial: " + array.length + "<br>");
+        document.write("Tamany del array amb valors inferiors a 250: " + arrayMenor.length + "<br>");
+        document.write("Tamany del array amb valors superiors a 250: " + arrayMajor.length + "<br><br>");
+
+        for (i = 0; i < array.length; i++) {
+            document.write("Elements del array incial: " + array[i] + "<br>");
+        }
+
+        document.write("<br><br>");
+
+        for (g = 0; g < arrayMenor.length; g++) {
+            document.write("Els valors inferiors a 250 son " + arrayMenor[g] + "<br>");
+        }
+
+        document.write("<br><br>");
+
+        for (f = 0; f < arrayMajor.length; f++) {
+            document.write("Els valors superiors a 250 son " + arrayMajor[f] + "<br>");
+        }
+    </script>
+</body>
+
+</html>

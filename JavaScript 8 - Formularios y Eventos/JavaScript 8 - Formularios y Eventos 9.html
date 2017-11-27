@@ -1,0 +1,43 @@
+<!--Confeccione un script en Javascript que presente una lista desplegable con tres opciones:
+
+•	Jamón y Queso
+•	4 Quesos
+•	Pepperoni
+
+y 1 (un) cuadro de texto para indicar el precio de la pizza seleccionada:-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Selecciona la teua pizza: </label>
+        <select name="pizzes" id="pizza" onchange="preupizza()">
+            <option value="jamon">Jamón y Queso</option>
+            <option value="cuatroq">4 Quesos</option>
+            <option value="pepperoni">Pepperoni</option>
+        </select>
+        <br>
+        <input type="text" id="preu" readonly/>
+        <br>
+    </form>
+    <script>
+        var valor = document.getElementById("pizza");
+
+        function preupizza() {
+            valor = valor.value;
+            if (valor === "jamon") {
+                document.getElementById("preu").value = "15€";
+            }
+            else if (valor === "cuatroq") {
+                document.getElementById("preu").value = "13€";
+            }
+            else {
+                document.getElementById("preu").value = "14€";
+            }
+        }
+    </script>
+</body>
+
+</html>

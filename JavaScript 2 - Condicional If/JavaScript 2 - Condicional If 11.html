@@ -1,0 +1,58 @@
+<!--Confeccione un script en Javascript que calcule un promedio solicitando la introducción sucesiva de 3 (tres) notas y un nombre:
+
+•	una 1ª nota	xxx
+•	una 2ª nota	yyy
+•	una 3ª nota	zzz
+
+•	un nombre	nnn
+
+
+A continuación mostrará las 3 (tres) notas:
+
+	La primera nota es	xxx.
+	La segunda nota es	yyy.
+	La tercera nota es	zzz.
+
+
+En caso de que la nota media sea igual o superior a 5 mostrará un mensaje:
+
+	Estimado/a nnn ha aprobado con una nota media de 	t’tttt.
+
+En caso de que la nota media se sitúe entre 4 y 4’999999 mostrará otro mensaje:
+
+	Estimado/a nnn con una nota media de 	t’tttttt casi 	ha superado los objetivos. Prepare la recuperación.
+
+En caso de que la nota media se sitúe por debajo de 4 mostrará este mensaje:
+
+    Estimado/a nnn con una nota media de 	t’tttttt no	ha superado los objetivos. Prepare la recuperación 	con gran esmero.-->
+    
+<html>
+    <head></head>
+    <body>
+        <script>
+        var nota1 = parseInt(prompt("Introduix la primera nota: "));
+        var nota2 = parseInt(prompt("Introduix la segona nota: "));
+        var nota3 = parseInt(prompt("Introduix la tercera nota: "));
+        var notaAr = (nota1 + nota2 + nota3) / 3;
+        var nom = prompt("Introduix el teu nom: ");
+
+        document.write ("La primera nota es: " +nota1);
+        document.write ("<br>");
+        document.write ("La segona nota es " +nota2);
+        document.write ("<br>");
+        document.write ("La tercera nota es " +nota3);
+        document.write ("<br>");
+
+        if (notaAr >= 5) {
+            document.write("Estimat/da " +nom+ " has aprobat amb una nota mitja de " +notaAr.toFixed(6));
+        }
+
+        else if (notaAr === 4) {
+            document.write("Estimat/da " +nom+ " amb una nota mitja de " +notaAr.toFixed(6)+ " <u>casi</u> has superat els objectius. Prepara la recuperació");
+        }
+        else {
+            document.write("Estimat/da " +nom+ " amb una nota mitja de " +notaAr.toFixed(6)+ " <u>no</u> has superat els objectius. Prepara la recuperación amb gran esmer.");
+        }
+        </script>
+    </body>
+</html>

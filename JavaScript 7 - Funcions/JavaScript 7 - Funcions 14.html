@@ -1,0 +1,38 @@
+<!--Confeccione un script en Javascript que tome del sistema el mes actual para mostrar por pantalla en qué cuatrimestre se encuentra:
+
+	Estando en el xº mes, nos encontramos en el ccc 	cuatrimestre del año.
+
+Haciendo uso de la clase Date-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            function cuatrimestre() {
+                var data
+                data = new Date();
+
+                if ((data.getMonth() + 1) === 1 || (data.getMonth() + 1) === 2 || (data.getMonth() + 1) === 3 || (data.getMonth() + 1) === 4) {
+                    document.write("Es el més " + data.getMonth() + " i s'está en el primer cuatrimestre.");
+                }
+                else if ((data.getMonth() + 1) === 5 || (data.getMonth() + 1) === 6 || (data.getMonth() + 1) === 7 || (data.getMonth() + 1) === 8) {
+                    document.write("Es el més " + data.getMonth() + " i s'está en el segón cuatrimestre.");
+                }
+
+                else if ((data.getMonth() + 1) === 9 || (data.getMonth() + 1) === 10 || (data.getMonth() + 1) === 11 || (data.getMonth() + 1) === 12) {
+                    document.write("Es el més " + (data.getMonth() + 1) + " i s'está en el tercer cuatrimestre.");
+                }
+
+                else {
+                    document.write("Error en el sistema.");
+                }
+            }
+
+            cuatrimestre();
+        </script>
+    </body>
+</head>
+
+</html>

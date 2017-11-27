@@ -1,0 +1,123 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	un 1er valor numérico		(xxx)
+•	un 2o valor numérico 		(zzz)
+
+Una vez introducidos calculará 18 (dieciocho) operaciones para mostrar un mensaje que seguirá el siguiente patrón:
+
+	La suma de xxx y zzz es yyy.
+
+	La resta de xxx menos zzz es yyy.
+
+	La resta de zzz menos xxx es yyy.
+
+	El producto de xxx por zzz es yyy.
+
+	La division de xxx entre zzz es yyy.
+
+	La division de zzz entre xxx es yyy.
+
+	El resto resultante de la division entera de xxx 	entre zzz es yyy.
+
+	El resto resultante de la division entera de zzz 	entre xxx es yyy.
+
+	xxx elevado a zzz es yyy.
+
+	zzz elevado a xxx es yyy.
+
+	La raíz cuadrada de xxx es yyy.
+
+	La raíz cuadrada de zzz es yyy.
+
+	La raíz de índice xxx de zzz es yyy.
+
+	La raíz de índice zzz de xxx es yyy.
+
+	El logaritmo neperiano de xxx es yyy.
+
+	El logaritmo neperiano de zzz es yyy.
+
+	El logaritmo en base xxx de zzz es yyy.
+
+	El logaritmo en base zzz de xxx es yyy.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+	<script>
+		var nombre1 = prompt("Introduix el primer nombre: ");
+		var nombre2 = prompt("Introduix el segon nombre: ");
+
+		var num1 = parseInt(nombre1);
+		var num2 = parseInt(nombre2);
+
+		var suma = num1 + num2;
+		var resta = num1 - num2;
+		var multi = num1 * num2;
+		var div = num1 / num2;
+		var div2 = num2 / num1;
+		var rest = num1 / (num2 * "100");
+		var rest2 = num2 / (num1 * "100");
+		var elev = Math.pow(num1, num2);
+		var elev2 = Math.pow(num2, num1);
+		var raiz = Math.sqrt(num1);
+		var raiz2 = Math.sqrt(num2);
+		var raizInd = Math.pow(num1, 1 / num2);
+		var raizInd2 = Math.pow(num2, 1 / num1);
+
+		document.write("La suma de " + num1 + " y " + num2 + " es " + suma + ".");
+
+		document.write("<br>");
+
+		document.write("La diferencia de " + num1 + " y " + num2 + " es " + resta + ".");
+
+		document.write("<br>");
+
+		document.write("El producte de " + num1 + " y " + num2 + " es " + multi + ".");
+
+		document.write("<br>");
+
+		document.write("La divisió de " + num1 + " y " + num2 + " es " + div + ".");
+		document.write("<br>");
+
+		document.write("La divisió de " + num2 + " y " + num1 + " es " + div2 + ".");
+
+		document.write("<br>");
+
+		document.write("El reste resultant de la divisió entera de " + num1 + " entre " + num2 + " es " + rest + ".");
+
+		document.write("<br>");
+
+		document.write("El reste resultant de la divisió entera de " + num2 + " entre " + num1 + " es " + rest2 + ".");
+
+		document.write("<br>");
+
+		document.write(+num1 + "elevat a " + num2 + " es " + elev + ".");
+
+		document.write("<br>");
+
+		document.write(+num2 + "elevat a " + num1 + " es " + elev2 + ".");
+
+		document.write("<br>");
+
+		document.write("La raiz de " + num1 + " es " + raiz + ".");
+
+		document.write("<br>");
+
+		document.write("La raiz de " + num2 + " es " + raiz2 + ".");
+
+		document.write("<br>");
+
+		document.write("El indice de la raiz de " + num1 + " es " + raizInd + ".");
+
+		document.write("<br>");
+
+		document.write("El indice de la raiz de " + num2 + " es " + raizInd2 + ".");
+
+	</script>
+</body>
+
+</html>

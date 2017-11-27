@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que rellene 10 (diez) posiciones de un array con valores enteros comprendidos entre el 1 (uno) y 1.000 (mil) obtenidos aleatoriamente. Se mostrará en pantalla el contenido del vector:
+
+	33	55	111	888	99	77	44	222	66	22
+
+Hecho esto, un método propio de los arrays, eliminará las posiciones impares del vector y se volverá a mostrar el contenido.
+
+    U	55	U	888	U	77	U	222	U	22-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        array = new Array(10);
+
+        for (var i = 0; i < array.length; i++) {
+            array[i] = Math.round(Math.random() * 1000);
+            document.write(array[i] + "<br>")
+        }
+
+        document.write("<br>");
+
+
+        for (var g = 0; g < array.length; g++) {
+            if (array[g] % 2 != 0) {
+                delete array[g];
+            }
+            document.write(array[g] + "<br>");
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 5 (cinco) valores consecutivos:
+
+	Introduzca un valor: xxx
+
+Una vez introducidos, se mostrará el siguiente mensaje:
+
+    El sumatorio de los 5 valores es: yyy.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        count = 0;
+        suma = 0;
+        while (count < 5) {
+            var valor = parseInt(prompt("Introduix un valor"));
+            suma += valor;
+            count++;
+        }
+        document.write("El sumatori dels 5 valors és: " + suma);
+    </script>
+</body>
+
+</html>

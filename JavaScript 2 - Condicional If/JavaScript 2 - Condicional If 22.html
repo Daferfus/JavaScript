@@ -1,0 +1,35 @@
+<!--Confeccione un script en Javascript que solicite 3 (tres) caracteres cualesquiera:
+
+•	primer carácter
+•	segundo carácter
+•	tercer carácter
+
+
+En caso de que al menos uno de los caracteres introducidos sea # (almohadilla) se mostrará:
+
+	Al menos uno de los caracteres introducidos es #.
+
+En caso contrario:
+
+	Ninguno de de los tres caracteres introducidos es #.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var valor1 = prompt("Introduce caracter 1");
+        var valor2 = prompt("Introduce caracter 2");
+        var valor3 = prompt("Introduce caracter 3");
+
+        if (valor1 === "#" || valor2 === "#" || valor3 === "#") {
+            document.write("Al menys un dels caracter introduits es #");
+        }
+        else {
+            document.write("Cap dels tres caracters introduits es #");
+        }
+    </script>
+</body>
+
+</html>

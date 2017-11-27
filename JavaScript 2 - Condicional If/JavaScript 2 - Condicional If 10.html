@@ -1,0 +1,32 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 2 (dos) letras:
+
+•	una primera letra		(A)
+•	una segunda letra		(B)
+
+Una vez introducidos mostrará un mensaje indicando si en el alfabeto la primera letra introducida es anterior o posterior a la segunda:
+
+	En el alfabeto, la letra A es anterior a la letra B.
+
+O bien:
+
+    En el alfabeto, la letra B es posterior a la letra A.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var lletra1 = prompt("Introduix primera lletra");
+        var lletra2 = prompt("Introduix segona lletra");
+
+        if (lletra1 > lletra2) {
+            document.write(lletra1 + " es posterior a " + lletra2);
+        }
+        else {
+            document.write(lletra1 + " es anterior a " + lletra2);
+        }
+    </script>
+</body>
+
+</html>

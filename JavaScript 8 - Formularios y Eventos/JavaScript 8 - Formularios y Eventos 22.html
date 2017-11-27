@@ -1,0 +1,55 @@
+<!--Confeccione un script en Javascript que presente 3 (tres) literales:
+
+•	Fondo rojo
+•	Fondo verde
+•	Fondo azul
+
+de manera que al pasar por encima de cualquiera de ellos con el cursor del ratón, el fondo de la página pase a ser de dicho color y al salir, la página recupere el color inicial.-->
+
+<html>
+
+<head>
+    <style>
+        label#rojo {
+            color: red;
+            font-size: 100px;
+            margin-left: 30%
+        }
+
+        label#verde {
+            color: green;
+            font-size: 100px;
+            margin-left: 30%
+        }
+
+        label#azul {
+            color: blue;
+            font-size: 100px;
+            margin-left: 30%
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label onmouseover="mostrarFondoRojo()" id="rojo">Fondo Rojo</label>
+        <br>
+        <label onmouseover="mostrarFondoVerde()" id="verde">Fondo Verde</label>
+        <br>
+        <label onmouseover="mostrarFondoAzul()" id="azul">Fondo Azul</label>
+        <br>
+    </form>
+    <script>
+        function mostrarFondoRojo() {
+            document.bgColor = "red";
+        }
+        function mostrarFondoVerde() {
+            document.bgColor = "green";
+        }
+        function mostrarFondoAzul() {
+            document.bgColor = "blue";
+        }
+    </script>
+</body>
+
+</html>

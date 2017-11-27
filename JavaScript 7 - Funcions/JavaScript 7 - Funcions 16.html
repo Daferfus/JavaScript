@@ -1,0 +1,45 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 8 (ocho) cantidades, los almacene en un array para mostrar por pantalla:
+
+	El valor acumulado de todos los elementos es: ttt.
+
+	El valor acumulado de los elementos mayores que 36 es: 	vvv.
+
+	De los 8 elementos introducidos hay www mayores que 50.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var edat = [];
+            var suma = 0;
+            var sumaEsp = 0;
+            var cant36 = 0;
+            var cant50 = 0;
+
+            function sumarArray(edat, suma) {
+                for (i = 0; i < 8; i++) {
+                    edat[i] = parseInt(prompt("Introduix edat"));
+                    suma = suma + edat[i];
+
+                    if (edat[i] > 36) {
+                        cant36++;
+                        sumaEsp = sumaEsp + edat[i];
+                    }
+
+                    if (edat[i] > 50) {
+                        cant50++;
+                    }
+                }
+                document.write("El valor acumulat de tots els elements és: " + suma + ".<br>");
+                document.write("El valor acumulat dels elements majors que 36 és: " + sumaEsp + ".<br>");
+                document.write("Dels 8 elements introduits hi han " + cant50 + " majors que 50.<br>");
+            }
+
+            sumarArray(edat, suma);
+        </script>
+    </body>
+</head>
+
+</html>

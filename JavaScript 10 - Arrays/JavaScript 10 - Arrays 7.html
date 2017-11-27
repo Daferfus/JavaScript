@@ -1,0 +1,31 @@
+<!--Confeccione un script en Javascript que almacene una cantidad indeterminada de sueldos en posiciones contiguas de un vector.
+
+En este ejercicio se utilizará un método, propio de los arrays, que añadirá cada cantidad en la última posición del vector.
+
+Esté proceso finalizará cuando se introduzca “0” como código de colaborador.
+
+Al finalizar la introducción de datos, mostrará por pantalla:
+
+    Se han invertido xxx € en sueldos.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = [];
+        do {
+            var index = parseInt(prompt("Introduix index"))
+            if (index != 0) {
+                var sou = parseInt(prompt("Introduix sou"));
+                array.push(sou);
+                sou = parseInt(sou) + parseInt(array);
+            }
+        } while (index != 0);
+
+        document.write("S'han invertit " + sou + "€ en sous")
+    </script>
+</body>
+
+</html>

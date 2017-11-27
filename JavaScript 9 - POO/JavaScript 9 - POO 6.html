@@ -1,0 +1,79 @@
+<!--Confeccione un script en Javascript que cree el objeto literal “Cliente”.
+
+Atributos:
+•	nombre
+•	saldo
+
+Y sus métodos:
+•	depositar
+•	extraer
+•	verificarSaldo
+
+Mostrará por pantalla los datos de un cliente, cuyos datos se incluyen en propio script.
+
+	Estado inicial:
+
+	Nombre del cliente: Juan.
+	Saldo activo: 0 €.
+
+
+	Saldo tras ingresar 1000 €:
+
+	Nombre del cliente: Juan.
+	Saldo activo: 1000 €.
+	El saldo supera los 900 €.
+
+
+	Saldo tras extraer 200 €:
+
+	Nombre del cliente: Juan.
+    Saldo activo: 800 €.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var client = {
+            nom: "Jorge",
+            sou: 50,
+
+            imprimir: function () {
+                document.write("Estat inicial: <br><br>");
+                document.write("Nom del client " + this.nom + "<br>");
+                document.write("Sou actiu: " + this.sou + "€<br><br>");
+                if (this.sou > 900) {
+                    document.write("El sou supera els 900€<br><br><br>");
+                }
+            },
+            depositar: function (diners) {
+                var deposit = this.sou += diners;
+                document.write("Sou despres d'ingresar " + diners + "€:<br><br>");
+                document.write("Nom del client " + this.nom + "<br>");
+                document.write("Sou actius: " + deposit + "€<br><br>");
+                if (this.sou > 900) {
+                    document.write("El sou supera els 900€<br><br><br>");
+                }
+            },
+
+            extraure: function (diners) {
+                var extret = this.sou - diners;
+                document.write("Sou després de extraure " + diners + "€:<br><br>");
+                document.write("Nom del client " + this.nom + "<br>");
+                document.write("Sou actiu: " + extret + "€<br><br>");
+                if (this.sou > 900) {
+                    document.write("El sou supera els 900€<br><br><br>");
+                }
+
+            }
+        };
+
+        client.imprimir();
+        client.depositar(9999);
+        client.extraure(2452);
+
+    </script>
+</body>
+
+</html>

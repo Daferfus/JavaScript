@@ -1,0 +1,28 @@
+<!--Confeccione un script en Javascript que solicite la introducción de:
+
+•	un nombre			(xxx)
+•	un valor numérico 		(zzz)
+
+Una vez introducidos calculará mostrará un mensaje que seguirá el siguiente patrón:
+
+	xxx está aprobado con un zzz.
+
+En caso de que el valor numérico sea igual o superior a 5. En caso contrario, no se mostrará ningún mensaje.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var nom = prompt("Introduce el nombre ");
+        var nota = prompt("Introduce la nota: ", 0);
+
+        if (nota >= 5) {
+            document.write(nom + " esta aprobat amb un " + nota + ".");
+        }
+    </script>
+</body>
+
+</html>

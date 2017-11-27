@@ -1,0 +1,57 @@
+<!--Confeccione un script en Javascript que solicite la introducción de una cadena alfanumérica:
+
+	Introduzca una cadena de carácteres	ccc
+
+En caso de no introducir ningún carácter o un espacio en blanco, se seguirá solicitando una cadena.
+
+
+A continuación se mostrarán los siguientes mensajes:
+
+	La cadena introducida es: "ccc".
+
+	"ccc" consta de xxx carácter(es).
+
+	El primer carácter de "ccc" es concretamente: "ccc".
+
+	Los 3 primeros carácteres de "ccc" son: "ccc".
+
+En caso de que la cadena introducida contenga la subcadena “hola”:
+
+	"ccc" contiene la subcadena "hola".
+
+En caso contrario:
+
+	"ccc" no contiene la subcadena "hola".
+
+	"ccc" convertida a mayúsculas es: "CCC".
+
+	"ccc" convertida a minúsculas es: "ccc".-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var cadena = prompt("Introduix la cadena de text: ");
+        function descripcioCadena(cadena) {
+            document.write("La cadena es: " + cadena + "<br>");
+            document.write("La cadena te: " + cadena.length + " caracters <br>");
+            document.write("La primera lletra es: " + cadena.charAt(0) + "<br>");
+            document.write("Els tres primers caracters de la cadena son: " + cadena.substr(0, 3) + "<br>")
+            if (cadena.indexOf("hola") > -1) {
+                document.write(cadena + " conte hola <br>");
+            }
+            else {
+                document.write(cadena + " no conté hola <br>");
+            }
+            document.write(cadena.toUpperCase() + "<br>");
+            document.write(cadena.toLowerCase() + "<br>");
+        }
+
+        descripcioCadena(cadena);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!--Confeccione un script en Javascript que muestre el mayor de 3 (tres) valores solicitados:
+
+•	un 1er valor	xxx
+•	un 2º valor	yyy
+•	un 3er valor	zzz
+
+A continuación:
+
+    El mayor de los tres es:	mmm.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Introduix el primer nombre: "));
+        var num2 = parseInt(prompt("Introduix el segon nombre: "));
+        var num3 = parseInt(prompt("Introduix el tercer nombre: "));
+
+        if (num1 > num2 & num1 > num3) {
+            document.write("El major es el " + num1);
+        }
+        else if (num2 > num1 & num2 > num3) {
+            document.write("El major es el " + num2);
+        }
+        else if (num3 > num1 & num3 > num2) {
+            document.write("El major es el " + num3);
+        }
+    </script>
+</body>
+
+</html>

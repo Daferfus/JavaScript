@@ -1,0 +1,48 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 5 (cinco) sueldos:
+
+	Introduzca el sueldo: xxx
+
+
+Una vez introducidos,  se mostrarán 3 (tres) mensajes:
+
+	La cantidad de empleados que cobran 1.000’00 € o 	menos es: yyy.
+
+	La cantidad de empleados que cobran más de 1.000’00 € 	es: zzz.
+
+    El montante que la empresa invierte en sueldos es: 	ttt.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        suma1 = 0;
+        count = 0;
+        countper = 0;
+        countper2 = 0;
+        var cant = parseInt(prompt("Introduix cantitat"));
+
+        while (count < cant) {
+            var sold = parseInt(prompt("Introduix sold"));
+            suma1 += sold;
+            count++;
+
+            if (sold <= 1000) {
+                countper++;
+            }
+            else {
+                countper2++;
+            }
+        }
+
+        document.write("La cantitat d'empleats que cobren 1000 o menys és: " + countper + ".");
+        document.write("<br>");
+        document.write("La cantitat d'empleats que cobren més de 100 és: " + countper2 + ".");
+        document.write("<br>");
+        document.write("El montant que la empresa invertix en solds és " + suma1 + ".");
+
+    </script>
+</body>
+
+</html>

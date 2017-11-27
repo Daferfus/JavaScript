@@ -1,0 +1,55 @@
+<!--Confeccione un script en Javascript que cree la clase “hipervinculo”.
+
+Atributos:
+•	direccion
+•	titulo
+
+Método
+•	retornarHipervinculo
+
+En un vector de 3 (tres) posiciones cargaremos 1 (un) enlace en cada posición con una dirección y un título para cada uno.
+
+
+Un bucle recorrerá el vector y mostrará por pantalla los 3 (tres) enlaces:
+
+	Google
+
+	Msn
+
+	Yahoo
+
+Las direcciones y los títulos se incluyen en propio script.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        class Hipervincul {
+
+            retornarHipervincul() {
+                var direccio = new Array();
+                direccio[0] = "www.google.es";
+                direccio[1] = "www.msn.com";
+                direccio[2] = "www.yahoo.com";
+
+                var titol = new Array();
+                titol[0] = "Google";
+                titol[1] = "MSN";
+                titol[2] = "Yahoo";
+
+                for (var i = 0; i < 3; i++) {
+                    document.write("<a href=" + direccio[i] + ">" + titol[i] + "</a>");
+                    document.write("<br>");
+                }
+            }
+        }
+
+        let hipervincul = new Hipervincul;
+        document.write(hipervincul.retornarHipervincul());
+
+    </script>
+</body>
+
+</html>

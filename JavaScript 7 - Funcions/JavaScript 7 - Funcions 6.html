@@ -1,0 +1,32 @@
+<!--Confeccione un script en Javascript que imprima en pantalla una fecha con el formato:
+
+	Hoy es xx de yyyy de zzz.
+
+A partir de 3 (tres) parámetros numéricos fijos incluidos en el script.
+
+Función con retorno.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+
+            var dia = 30;
+            var mes = "Gener";
+            var any = 1996
+
+            function data(dia, mes, any) {
+
+                var cadena = "Hui es " + dia + " de " + mes + " de " + any + ".";
+                return cadena;
+            }
+
+            document.write(data(dia, mes, any));
+
+        </script>
+    </body>
+</head>
+
+</html>

@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que solicite 1 (un) valor comprendido entre 1 (uno) y 5 (cinco).
+
+Mostrará dicho número escrito con letras en los siguientes idiomas:
+
+•	Español/Castellano
+•	Valenciano
+•	Francés
+•	Italiano
+•	Inglés
+•	Alemán
+
+Función con retorno.-->
+
+<html>
+    <head>
+        <body>
+            <script>
+                nombre = parseInt(prompt("Introduix nombre: "));
+
+                function nombresExtrangers(nombre){
+                    if (nombre===1){
+                        return "Un, U(n), Un, Uno, One, Eins";
+                    }
+                    else if (nombre===2){
+                        return "Dos, Dos/Dues, Deus, Due, Two, Zwei";
+                    }
+                    else if (nombre===3){
+                        return "Tres, Tres, Trois, Tre, Three, Drei";
+                    }
+                    else if (nombre===4){
+                        return "Cuatro, Quatre, Quetro, Quattro, Four, Vier";
+                    }
+                    else if (nombre===5){
+                        return "Cinco, Cinc, Cinq, Cinque, Five, Fürl";
+                    }
+                    else{
+                        return "No has introduit un nombre entre 1-5";
+                    }
+                }
+
+                nombres = nombresExtrangers(nombre);
+                document.write(nombres);
+
+            </script>
+        </body>
+    </head>
+</html>

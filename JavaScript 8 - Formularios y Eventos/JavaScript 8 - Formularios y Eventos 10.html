@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que presente una lista desplegable con tres opciones:
+•	Fusión
+•	Tropical
+•	Neptuno
+
+y 1 (un) cuadro de texto para indicar la cantidad de pizzas.
+
+La pulsación sobre un botón indicará en un segundo cuadro de texto el importe del pedido.
+
+Admite cantidades negativas-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Selecciona la teua pizza: </label>
+        <select name="pizzes" id="pizza" onchange="preupizza()">
+            <option value="fusion">Fusion</option>
+            <option value="tropical">Tropical</option>
+            <option value="neptuno">Neptuno</option>
+        </select>
+        <br>
+        <input type="text" id="cantitat">
+        <br>
+        <br>
+        <input type="text" id="preu" readonly>
+        <br>
+    </form>
+    <script>
+        function preupizza() {
+            var valor = document.getElementById("pizza");
+            if (valor.value === "fusion") {
+                document.getElementById("preu").value = 15 * (document.getElementById("cantitat").value);
+            }
+            else if (valor.value === "tropical") {
+                document.getElementById("preu").value = 13 * (document.getElementById("cantitat").value);
+            }
+            else {
+                document.getElementById("preu").value = 14 * (document.getElementById("cantitat").value);
+            }
+        }
+    </script>
+</body>
+
+</html>

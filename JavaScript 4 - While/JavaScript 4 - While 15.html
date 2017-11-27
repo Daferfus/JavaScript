@@ -1,0 +1,45 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 3 (tres) valores para 2 (dos) listas diferentes:
+
+	Introduzca un valor para la primera lista: xxx
+	...
+	Introduzca un valor para la segunda lista: xxx
+
+Una vez introducidos los 6 (seis), se mostrará un mensaje que indique en cuál de las 2 (dos) listas el acumulado es mayor o si los acumulados son iguales:
+
+	El total acumulado de la Zª lista es mayor.
+
+  Ambas listas tienen el mismo total acumulado.-->
+
+<html>
+
+<head></head>
+
+<body>
+  <script>
+    var suma1 = 0;
+    var suma2 = 0;
+    var count = 0;
+
+    while (count < 3) {
+      var fila1 = parseInt(prompt("Introduix un valor per a la primera llista"));
+      suma1 += fila1;
+      count++;
+    }
+    while (count < 6) {
+      var fila2 = parseInt(prompt("Introduix un valor per a la segona llista"));
+      suma2 += fila2;
+      count++
+    }
+
+    if (suma1 > suma2) {
+      document.write("El total acumulat de la primera llista es major.");
+    }
+    else if (suma1 < suma2) {
+      document.write("El total acumulat de la segona llista es major.");
+    } else {
+      document.write("Ambes llistes tenen el mateix total acumulat");
+    }              
+  </script>
+</body>
+
+</html>

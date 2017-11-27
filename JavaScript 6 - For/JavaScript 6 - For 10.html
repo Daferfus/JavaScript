@@ -1,0 +1,75 @@
+<!--Confeccione un script en Javascript que solicite los lados de 5 (cinco) triángulos:
+
+	Introduzca el primer lado	xxx
+	Introduzca el segundo lado	yyy
+	Introduzca el primer lado	zzz
+
+A continuación dirimirá si el triángulo es equilátero, isósceles o escaleno:
+
+	Es un triángulo …
+
+El script finalizará indicando cuántos triángulos de cada clase se han introducido:
+
+	Cantidad de triángulos equiláteros:
+
+	Cantidad de triángulos isósceles:
+
+	Cantidad de triángulos escalenos:
+
+y de qué clase se han introducido menos:
+
+	Se han descrito menos triángulos ttt que uuu o vvv.
+
+Arreglar en caso de empate.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var contaEqui = 0;
+            var contaEscal = 0;
+            var contaIso = 0;
+
+            for (i = 0; i <= 5; i++) {
+                var costat1 = parseInt(prompt("Introduix el primer costat"));
+                var costat2 = parseInt(prompt("Introduix el segon costat"));
+                var costat3 = parseInt(prompt("Introduix el tercer costat"));
+
+                if (costat1 != costat2 && costat2 != costat3) {
+                    document.write("Es un triangle escalé.<br>");
+                    contaEscal++;
+                }
+
+                if (costat1 === costat2 && costat2 === costat3) {
+                    document.write("Es un triangle equilater.<br>");
+                    contaEqui++;
+                }
+
+                if (costat1 === costat2 && costat2 != costat3) {
+                    document.write("Es un triangle isóceles.<br>");
+                    contaIso++;
+                }
+            }
+
+            document.write("Cantitat de triángles equiláters: " + contaEqui + ".<br>");
+            document.write("Cantitat de triangles escalé: " + contaEscal + ".<br>");
+            document.write("Cantitat de triangles isóceles: " + contaIso + ".<br>");
+
+            if (contaEqui < contaEscal && contaEqui < contaIso) {
+                document.write("S'han ingresat menys triangles equilaters que escalés o isóceles.");
+            }
+
+            if (contaEscal < contaEqui && contaEscal < contaIso) {
+                document.write("S'han ingresat menys triangles escalés que equilaters o isóceles.");
+            }
+
+            if (contaIso < contaEqui && contaIso < contaEscal) {
+                document.write("S'han ingresat menys triangles isóceles que equilaters o escalés.");
+            }
+        </script>
+    </body>
+</head>
+
+</html>

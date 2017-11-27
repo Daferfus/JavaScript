@@ -1,0 +1,61 @@
+<!--Confeccione un script en Javascript que solicite la introducción de 2 (dos) valores:
+
+•	un primer valor		(xxx)
+•	un segundo valor		(yyy)
+
+Una vez introducidos mostrará 3 (tres) mensajes siguiendo el siguiente patrón:
+
+Puesto que xxx es mayor que yyy, procedo a sumarlos y restarlos.
+
+xxx + yyy = zzz.
+xxx - yyy = zzz.
+yyy - xxx = zzz.
+
+
+O bien:
+
+Puesto que xxx es menor que yyy, procedo a multiplicarlos y dividirlos.
+
+xxx x yyy = zzz.
+xxx / yyy = zzz.
+yyy / xxx = zzz.
+-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Introduix el primer nombre: "));
+        var num2 = parseInt(prompt("Introduix el segon nombre: "));
+        var suma = num1 + num2;
+        var resta = num1 - num2;
+        var resta2 = num2 - num1;
+        var multi = num1 * num2;
+        var div = num1 / num2;
+
+        if (num1 > num2) {
+            document.write("Ja que " + num1 + " es major que " + num2 + " , procedisc a sumar i restarlos");
+            document.write("<br>");
+            document.write(suma);
+            document.write("<br>")
+            document.write(resta);
+            document.write("<br>");
+            document.write(resta2);
+        }
+        else if (num1 < num2) {
+            document.write("Ja que " + num1 + " es menor que " + num2 + " , procedisc a multiplicarlos i dividirlos");
+            document.write("<br>");
+            document.write(multi);
+            document.write("<br>");
+            document.write(div);
+        }
+
+        else {
+            document.write(num1 + " y " + num2 + " son iguals");
+        }
+    </script>
+</body>
+
+</html>

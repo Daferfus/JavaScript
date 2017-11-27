@@ -1,0 +1,32 @@
+<!--Confeccione un script en Javascript que solicite la introducción por teclado de una cantidad (xxx) positiva, negativa, con o sin decimales.
+
+Una vez introducida mostrará el siguiente mensaje:
+
+	El número xxx tiene yyy dígitos en su parte entera.
+
+Hacer con .length
+si negativo Math.abs
+truncar con parseInt
+pasar a string con .toString o +””-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            var nombre = parseFloat(prompt("Introduix un nombre"));
+
+            function enter(nombre) {
+                nombre = Math.abs(parseInt(nombre)); //Lleva el signe del negatiu.
+                return nombre.toString().length;
+
+            }
+
+            digits = enter(nombre);
+            document.write("El nombre " + nombre + " te " + digits + " digits.");
+        </script>
+    </body>
+</head>
+
+</html>

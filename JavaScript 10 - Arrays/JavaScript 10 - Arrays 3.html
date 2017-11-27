@@ -1,0 +1,40 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un número indeterminado de valores enteros para guardarlos en un vector -denso- hasta que se introduzca “0”. 
+
+Mostrará por pantalla:
+
+	Se introdujeron xxx valores.
+
+    La suma de los valores introducidos es: yyy.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var contador = 0;
+        var array = [];
+        var i = 0;
+
+        do {
+            var nombre = parseInt(prompt("Introduix nombre"));
+            if (nombre != 0) {
+                array[i] = nombre;
+                i++;
+                contador++;
+            }
+        } while (nombre != 0);
+
+
+        document.write("S'han introduit " + contador + " nombres<br>");
+
+        var sumaArray = 0;
+
+        for (var g = 0; g < array.length; g++) {
+            sumaArray = sumaArray + parseInt(array[g]);
+        }
+        document.write("La suma dels nombres del array es de " + sumaArray);
+    </script>
+</body>
+
+</html>

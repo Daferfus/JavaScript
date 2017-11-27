@@ -1,0 +1,41 @@
+<!--Confeccione un script en Javascript en el que aparezca una tabla de 1 (una) fila y 3 (tres) celdas con los siguientes enlaces:
+
+•	Hotmail
+•	Yahoo
+•	Gmail
+
+de manera que al pasar por encima con el cursor del ratón las celdas adquieran color:
+
+•	Rojo
+•	Verde
+•	Azul
+
+respectivamente y al hacer click se abra la página indicada.-->
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td onMouseOver="pintarCelda(this,'red')" onMouseOut="pintarCelda(this,'white')">
+                <a href="https://www.live.com/">Hotmail</a>
+            </td>
+            <td onMouseOver="pintarCelda(this,'green')" onMouseOut="pintarCelda(this,'white')">
+                <a href="https://es.yahoo.com/">Yahoo</a>
+            </td>
+            <td onMouseOver="pintarCelda(this,'blue')" onMouseOut="pintarCelda(this,'white')">
+                <a href="https://www.google.com/gmail/">Gmail</a>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function pintarCelda(celda, color) {
+            celda.bgColor = color;
+        }
+    </script>
+</body>
+
+</html>

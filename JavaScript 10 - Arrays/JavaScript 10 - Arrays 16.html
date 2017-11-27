@@ -1,0 +1,31 @@
+<!--Confeccione un script en Javascript que rellene un vector con los 10 (diez) guarismosy los mostrará por pantalla:
+
+
+	Vector inicial:
+
+	0	1	2	3	4	5	6	7	8	9
+
+Un método propio de los arrays eliminará 3 (tres) posiciones a partir de la posición 1 (uno) y asimismo añadirá otros 3:
+
+	Tras extraer de tres elementos a partir de la 	posición 1 e insertar otros tres, el vector queda:
+
+    0 10 20 30 4 5 6 7 8 9-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        document.write("Array inicial: " + array);
+        document.write("<br>");
+
+        array.splice(1, 3, 10, 20, 30);
+
+        document.write("Després de extraure tres elements a partir de la posició 1 e insertar-ne uns altres tres, en el array queda: " + array);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!--Confeccione un script en Javascript que al pasar por encima de la parte superior central de la página aparezca un literal de color blanco sobre fondo del color indicado:
+
+•	Celda en color rojo
+•	Celda en color verde
+•	Celda en color azul-->
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td onMouseOver="pintarCelda(this,'red')" onMouseOut="pintarCelda(this,'white')">Celda Roja</td>
+                <td onMouseOver="pintarCelda(this,'green')" onMouseOut="pintarCelda(this,'white')">Celda Verd</td>
+                <td onMouseOver="pintarCelda(this,'blue')" onMouseOut="pintarCelda(this,'white')">Celda Blava</td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function pintarCelda(celda, color) {
+            celda.bgColor = color;
+        }
+    </script>
+</body>
+
+</html>

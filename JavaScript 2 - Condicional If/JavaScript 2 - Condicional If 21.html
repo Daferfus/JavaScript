@@ -1,0 +1,30 @@
+<!--Confeccione un script en Javascript que solicite:
+
+•	un mes del año en cifras
+
+En caso de que el número del mes introducido corresponda al primer trimestre mostrará:
+
+	Corresponde al primer trimestre del año.
+
+En caso contrario:
+
+	No corresponde al primer trimestre del año.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var mes = parseInt(prompt("Introduix mes"));
+
+        if (mes === 1 || mes === 2 || mes === 3) {
+            document.write("Correspon al primer trimestre del any");
+        }
+        else {
+            document.write("No correspon a al primer trimestre del any");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción de la longitud del lado de un cuadrado e imprima por pantalla:
+
+	El perímetro de un cuadrado de lado xxx es: yyy.
+
+	El área de un cuadrado de lado xxx es: zzz.-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            costat = parseFloat(prompt("Introduix la medida del costat"));
+
+            function perimetre(costat) {
+                var perimetre = costat + costat + costat + costat;
+                return perimetre;
+            }
+
+            function area(costat) {
+                var area = costat * costat;
+                return area;
+            }
+
+            calculPerimetre = perimetre(costat);
+            document.write("El perímetre de un cuadrat de costat " + costat + " és " + calculPerimetre + ".<br>");
+
+            calculArea = area(costat);
+            document.write("El área de un cuadrat de costat " + costat + " és " + calculArea + ".");
+        </script>
+    </body>
+</head>
+
+</html>

@@ -1,0 +1,27 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un valor inicial:
+
+	Indique el primer cuadrado que quiere calcular: xxx
+
+A continuación un valor final:
+
+	Indique el último cuadrado que quiere calcular. Debe 	ser al menos: ( xxx+1 ) yyy
+
+Si ambos terminos son iguales o el segundo (yyy) es menor que el primero (xxx), volverá a solicitarlos hasta que cumplan los requisitos.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var primTerm = parseInt(prompt("Introduix el primer cuadrat que vol calcular"));
+        var segonTerm = parseInt(prompt("Introduix l'ultim cuadrat que vol calcular"));
+
+        for (primTerm; primTerm <= segonTerm; primTerm++) {
+            var cuadrat = Math.pow(primTerm, 2);
+            document.write(primTerm + "^2 = " + cuadrat + "<br>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!--Confeccione un script en Javascript que presente:
+
+•	un cuadro de texto que solicite la introducción de un nombre
+•	un cuadro de texto que solicite la introducción de una edad
+
+•	y un botón que haga visualizar los datos introducidos en sendos mensajes de alerta:
+
+•	Ha introducido nnn como nombre
+•	y eee como edad.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        function dades() {
+            var nom = document.getElementById("nom").value;
+            var edat = document.getElementById("edat").value;
+            alert("El teu nom es " + nom + " i la teua edat es " + edat + "<br>");
+        }
+    </script>
+    <form>
+        <label>Introduïx el teu nom: </label>
+        <input type="text" id="nom">
+        <br>
+        <label>Introduïx la teua edat: </label>
+        <input type="number" id="edat">
+        <br>
+        <input type="button" onClick="dades()" value="Confirmar">
+    </form>
+</body>
+
+</html>

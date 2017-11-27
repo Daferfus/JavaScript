@@ -1,0 +1,66 @@
+<!--Confeccione un script en Javascript que solicite la introducción de la edad de 5 (cinco) alumnos/as:
+
+•	Del turno matutino
+•	Del turno vespertino
+•	Del turno nocturno
+
+Una vez introducidos los 15 (quince) valores, mediante 4 (cuatro) mensajes indicará:
+
+	El promedio de edad de los alumnos del turno matutino es: 	xxx.
+
+	El promedio de edad de los alumnos del turno vespertino 	es: yyy.
+
+	El promedio de edad de los alumnos del turno nocturno es: 	zzz.
+
+
+	El turno ??????? tiene el mayor promedio de edad.
+
+Un bucle y diferenciar turno (2 preguntas)-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+
+            var sumaMatuti = 0;
+            var sumaVesperti = 0;
+            var sumaNocturn = 0;
+
+            for (i = 0; i < 5; i++) {
+                var edatMatuti = parseInt(prompt("Introduix l'edat dels alumnes del torn matutí."));
+                sumaMatuti += edatMatuti;
+            }
+
+            for (e = 0; e < 5; e++) {
+                var edatVesperti = parseInt(prompt("Introduix l'edat dels alumnes del torn vespertí."));
+                sumaVesperti += edatVesperti;
+            }
+
+            for (o = 0; o < 5; o++) {
+                var edatNocturn = parseInt(prompt("Introduix l'edat dels alumnes del torn nocturn."));
+                sumaNocturn += edatNocturn;
+            }
+
+            var promigMatuti = sumaMatuti / 5;
+            var promigVesperti = sumaVesperti / 5;
+            var promigNocturn = sumaNocturn / 5;
+            document.write("El promig de l'edat dels alumnes del torn matutí és: " + promigMatuti + ".<br>");
+            document.write("El promig de l'edat dels alumnes del torn vespertí es: " + promigVesperti + ".<br>");
+            document.write("El promig de l'edat del torn nocturn es: " + promigNocturn + ".<br>");
+
+            if (promigMatuti > promigVesperti && promigMatuti > promigNocturn) {
+                document.write("El torn matutí te el major promig d'edat.");
+            }
+            if (promigVesperti > promigMatuti && promigVesperti > promigNocturn) {
+                document.write("El torn vespertí te el major promig d'edat.");
+            }
+            if (promigNocturn > promigMatuti && promigNocturn > promigVesperti) {
+                document.write("El torn nocturn te el major promig d'edat.");
+            }
+        </script>
+    </body>
+</head>
+
+</html>

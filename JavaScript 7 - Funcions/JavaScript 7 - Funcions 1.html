@@ -1,0 +1,47 @@
+<!--Confeccione un script en Javascript que solicite por teclado la introducción del primer y último término de un intervalo e imprima por pantalla dicha sucesión:
+
+	Introduzca el valor inferior: 	xxx.
+
+	Introduzca el valor superior: 	yyy.
+
+Una vez introducidos mostrará el intervalo:
+
+	xxx, xxx+1, xxx+2, … y yyy.
+
+Mediante función.
+
+(… 15, y 16.)
+
+diferenciar penúltimo y último (59, y 60)
+
+permitir que el 1º sea menor que el segundo siendo el intervalo decreciente-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            function mostrarComprenduts(x1, x2) {
+                for (inicio = x1; inicio <= x2; inicio++) {
+                    if (inicio < x2) {
+                        document.write(inicio + ", ");
+                    }
+                    else {
+                        document.write("y " + inicio + ".");
+                    }
+                }
+            }
+
+            var valor1 = 0; valor2 = 0;
+
+            while (valor2 <= valor1) {
+                valor1 = parseInt(prompt("Introduix el primer valor"));
+                valor2 = parseInt(prompt("Introduix el ultim valor"));
+            }
+            mostrarComprenduts(valor1, valor2);
+        </script>
+    </body>
+</head>
+
+</html>

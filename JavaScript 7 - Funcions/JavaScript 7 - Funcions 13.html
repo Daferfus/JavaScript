@@ -1,0 +1,36 @@
+<!--Confeccione un script en Javascript que muestre por pantalla:
+
+	Hoy es: dd/mm/aaaa.
+
+	Son / Es la(s) hh:mm:ss.
+
+La fecha y la hora son las del sistema.
+
+Haciendo uso de la clase Date-->
+
+<html>
+
+<head>
+
+    <body>
+        <script>
+            function mostrarDataHora() {
+                var data;
+                data = new Date();
+                document.write("Hui es ");
+                document.write(data.getDate() + "/");
+                document.write((data.getMonth() + 1) + "/");
+                document.write(data.getFullYear() + ".");
+                document.write("<br>");
+                document.write("Son/És la/les ");
+                document.write(data.getHours() + ":");
+                document.write(data.getMinutes() + ":");
+                document.write(data.getSeconds() + ".");
+            }
+
+            mostrarDataHora();
+        </script>
+    </body>
+</head>
+
+</html>

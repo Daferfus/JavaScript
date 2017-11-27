@@ -1,0 +1,43 @@
+<!--Confeccione un script en Javascript que solicite la introducción de un número indefinido de valores comprendidos entre Ø y 999:
+
+	Introduzca un valor comprendido entre Ø y 999: xxx
+
+
+para indicar si dicho valor es de una, dos o tres cifras:
+
+	El valor aaa tiene 1 dígito.
+	El valor aaa tiene y dígitos.
+
+	… 
+
+	El valor Ø tiene 1 dígito.
+
+
+El script finaliza al introducir “Ø”.-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        do {
+            var valor = parseInt(prompt("Introduix valor"));
+
+            if (valor != 0) {
+                if (valor < 10) {
+                    document.write(valor + " té un digit<br>");
+                }
+                else if (valor < 100) {
+                    document.write(valor + " té dos digits<br>");
+                }
+                else {
+                    document.write(valor + " té tres digits<br>");
+                }
+            }
+        }
+        while (valor != 0);
+    </script>
+</body>
+
+</html>

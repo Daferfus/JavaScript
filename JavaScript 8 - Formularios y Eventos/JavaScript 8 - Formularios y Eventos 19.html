@@ -1,0 +1,41 @@
+<!--Confeccione un script en Javascript que presente:
+
+	Libro de Visitas
+
+a continuación 2 (dos) cajas de texto:
+
+	una para el Nick
+	otra para el e-mail
+
+y (un) textarea de 20 (veinte) filas y 100 (cien) columnas encabezado por “Introduzca sus comentarios” y seguidamente un botón “Pulse para verificar los datos introducidos”, que al ser pulsado indique:
+
+•	D. / Dña			xxx
+•	cuyo e-mail es		yyy
+•	comenta			zzz (texto del textarea)-->
+
+<html>
+
+<head></head>
+
+<body>
+    <form>
+        <label>Nick: </label>
+        <input type="text" id="nick">
+        <br>
+        <label>Correo: </label>
+        <input type="text" id="correo">
+        <br>
+        <label>Comentarios: </label>
+        <textarea cols="50" rows="10" id="texto"></textarea>
+        <br>
+        <br>
+        <input type="button" onClick="mostrar()" value="Verificar">
+    </form>
+    <script>
+        function mostrar() {
+            alert("Nick: " + document.getElementById("nick").value + "\nCorreo: " + document.getElementById("correo").value + "\nComentario: " + document.getElementById("texto").value)
+        }
+    </script>
+</body>
+
+</html>

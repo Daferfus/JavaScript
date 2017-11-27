@@ -1,0 +1,122 @@
+<!--Confeccione un script en Javascript que solicite cuántos puntos se van a localizar en el diagrama cartesiano:
+
+	¿Cuántos puntos vamos a procesar?	xxx
+
+Una vez introducidos indicará cuántos puntos se han localizado en cada cuadrante, eje o origen:
+
+	Del par de puntos introducidos: (en el caso de un solo par)
+
+	De los xxx pares de puntos introducidos:
+	(en el caso de más un par)
+_______________________________________________________________________
+
+	yyy se sitúa(n) en el primer cuadrante.
+
+	zzz se sitúa(n) en el segundo cuadrante.
+
+	ttt se sitúa(n) en el tercer cuadrante.
+
+	vvv se sitúa(n) en en el cuarto cuadrante.
+
+	hhh se sitúa(n) en en el eje horizontal.
+
+	www se sitúa(n) en en el eje vertical.
+
+	ooo se sitúa(n) en en el origen.
+
+
+Sólo se visualizarán los mensajes correspondientes a los cuadrantes en los que se han situado pares de puntos.
+
+Evitar 0 puntos-->
+
+<html>
+
+<head></head>
+
+<body>
+    <script>
+        var cantitat = parseInt(prompt("Introduix cantitat"));
+        contadorPrimer = 0;
+        contadorSegon = 0;
+        contadorTercer = 0;
+        contadorCuart = 0;
+        contadorOrigen = 0;
+        contadorHorizontal = 0;
+        contadorVertical = 0;
+
+        for (i = 1; i <= cantitat; i++) {
+            var x = parseInt(prompt("Introduix la coordenada x"));
+            var y = parseInt(prompt("Introduix la coordenada y"));
+
+            if (x < 0 && y < 0) {
+                contadorTercer++;
+            }
+
+            if (x > 0 && y > 0) {
+                contadorPrimer++;
+            }
+
+            if (x < 0 && y > 0) {
+                contadorSegon++;
+            }
+
+            if (x > 0 && y < 0) {
+                contadorCuart++;
+            }
+
+            if (x === 0 && y === 0) {
+                contadorOrigen++;
+            }
+
+            if (x === 0 && y > 0 || x === 0 && y < 0) {
+                contadorHorizontal++;
+            }
+
+            if (x > 0 && y === 0 || x < 0 && y === 0) {
+                contadorVertical++;
+            }
+        }
+
+        if (cantitat === 0) {
+            document.write("nop");
+        }
+        if (cantitat === 1) {
+            if (x > 0 && y > 0) {
+                document.write(contadorPrimer + " se situa(en) en el primer cuadrant<br>");
+            }
+            if (x < 0 && y > 0) {
+                document.write(contadorSegon + " se situa(en) en el segon cuadrant<br>");
+            }
+            if (x < 0 && y < 0) {
+                document.write(contadorTercer + " se situa(en) en el tercer cuadrant<br>");
+            }
+            if (x > 0 && y < 0) {
+                document.write(contadorCuart + " se situa(en) en el cuart cuadrant<br>");
+            }
+            if (x === 0 && y === 0) {
+                document.write(contadorOrigen + " se situa(en) en el origen<br>");
+            }
+
+            if (x === 0 && y > 0 || x === 0 && y < 0) {
+                document.write(contadorHorizontal + " se situa(en) en el eix horizontal<br>");
+            }
+
+            if (x > 0 && y === 0 || x < 0 && y === 0) {
+                document.write(contadorVertical + " se situa(en) en el eix vertical <br>");
+            }
+
+        }
+        if (cantitat > 1) {
+
+            document.write(contadorPrimer + " se situa(en) en el primer cuadrant<br>");
+            document.write(contadorSegon + " se situa(en) en el segon cuadrant<br>");
+            document.write(contadorTercer + " se situa(en) en el tercer cuadrant<br>");
+            document.write(contadorCuart + " se situa(en) en el cuart cuadrant<br>");
+            document.write(contadorHorizontal + " se situa(en) en el eix horizontal<br>");
+            document.write(contadorVertical + " se situa(en) en el eix vertical <br>");
+            document.write(contadorOrigen + " se situa(en) en el origen<br>");
+        }
+    </script>
+</body>
+
+</html>
